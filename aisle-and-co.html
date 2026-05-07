@@ -1,0 +1,1101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Aisle & Co. — Wedding-day care for your littlest guests</title>
+<meta name="description" content="Trained, insured wedding-day childcare and pet handling across Northeast Florida." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --brand-blue:#1F4E79;
+    --brand-blue-deep:#163958;
+    --accent-gold:#C9A86A;
+    --accent-gold-soft:#e0c896;
+    --cream:#F4EFE6;
+    --cream-deep:#ece4d4;
+    --paper:#FBF8F2;
+    --charcoal:#222222;
+    --subtle:#6A6A6A;
+    --line:rgba(34,34,34,.12);
+    --line-soft:rgba(34,34,34,.07);
+    --shadow-sm: 0 1px 2px rgba(20,30,50,.04), 0 4px 14px rgba(20,30,50,.05);
+    --shadow-md: 0 8px 24px rgba(20,30,50,.07), 0 2px 6px rgba(20,30,50,.04);
+    --shadow-lg: 0 24px 60px rgba(20,30,50,.12), 0 6px 20px rgba(20,30,50,.06);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--paper);color:var(--charcoal);font-family:"Inter",system-ui,sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  body{font-size:16px;line-height:1.6;letter-spacing:-0.005em}
+  a{color:inherit}
+  img{display:block;max-width:100%}
+  button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+  ::selection{background:var(--accent-gold);color:#fff}
+
+  /* type */
+  .serif{font-family:"Cormorant Garamond",Georgia,serif;font-weight:400;letter-spacing:.005em}
+  .eyebrow{font-family:"Inter",sans-serif;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--subtle);font-weight:500}
+  .lede{font-family:"Cormorant Garamond",serif;font-weight:300;font-size:clamp(20px,2.2vw,26px);line-height:1.45;color:#3a3a3a;letter-spacing:.005em}
+  h1,h2,h3,h4{font-family:"Cormorant Garamond",serif;font-weight:400;letter-spacing:.005em;margin:0;color:var(--charcoal)}
+  h1{font-size:clamp(40px,6.2vw,84px);line-height:1.02}
+  h2{font-size:clamp(32px,4.4vw,56px);line-height:1.05}
+  h3{font-size:clamp(22px,2.4vw,30px);line-height:1.15}
+  p{margin:0}
+
+  /* layout */
+  .wrap{max-width:1240px;margin:0 auto;padding:0 32px}
+  .wrap-narrow{max-width:980px;margin:0 auto;padding:0 32px}
+  section{padding:clamp(72px,10vw,140px) 0}
+  .rule{height:1px;background:var(--line-soft);width:100%}
+  .divider{display:flex;align-items:center;gap:18px;color:var(--subtle);font-size:11px;letter-spacing:.22em;text-transform:uppercase}
+  .divider::before,.divider::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  /* buttons */
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:15px 28px;border-radius:999px;font-size:14px;letter-spacing:.04em;font-weight:500;transition:all .35s cubic-bezier(.2,.7,.2,1);border:1px solid transparent;text-decoration:none;cursor:pointer;line-height:1}
+  .btn-primary{background:var(--accent-gold);color:#1a1a1a}
+  .btn-primary:hover{background:#b89456;transform:translateY(-1px);box-shadow:0 12px 28px rgba(201,168,106,.32)}
+  .btn-outline{border-color:rgba(255,255,255,.7);color:#fff;background:transparent}
+  .btn-outline:hover{background:#fff;color:var(--brand-blue)}
+  .btn-outline-dark{border:1px solid var(--brand-blue);color:var(--brand-blue);background:transparent}
+  .btn-outline-dark:hover{background:var(--brand-blue);color:#fff}
+  .btn-ghost{padding:10px 0;border-radius:0;border-bottom:1px solid var(--charcoal);color:var(--charcoal)}
+  .btn-ghost:hover{color:var(--accent-gold);border-color:var(--accent-gold)}
+  .btn .arrow{transition:transform .35s ease}
+  .btn:hover .arrow{transform:translateX(4px)}
+
+  /* header */
+  header.nav{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .45s ease,backdrop-filter .45s ease,border-color .45s ease,padding .45s ease;border-bottom:1px solid transparent;padding:22px 0}
+  header.nav.scrolled{background:rgba(251,248,242,.78);backdrop-filter:saturate(140%) blur(14px);-webkit-backdrop-filter:saturate(140%) blur(14px);border-color:var(--line-soft);padding:14px 0}
+  header.nav.on-dark:not(.scrolled){color:#fff}
+  header.nav .bar{display:flex;align-items:center;justify-content:space-between;gap:32px}
+  .logo{font-family:"Cormorant Garamond",serif;font-size:26px;letter-spacing:.02em;font-weight:500;display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:inherit}
+  .logo .amp{font-style:italic;color:var(--accent-gold);font-weight:400}
+  .navlinks{display:flex;gap:36px}
+  .navlinks a{font-size:13px;letter-spacing:.06em;text-decoration:none;color:inherit;opacity:.82;position:relative;padding:6px 0;transition:opacity .25s}
+  .navlinks a:hover{opacity:1}
+  .navlinks a.active{opacity:1}
+  .navlinks a.active::after{content:"";position:absolute;left:50%;bottom:-2px;width:4px;height:4px;background:var(--accent-gold);border-radius:50%;transform:translateX(-50%)}
+  .nav-cta{display:flex;align-items:center;gap:14px}
+  .menu-btn{display:none;width:40px;height:40px;align-items:center;justify-content:center;border:1px solid var(--line);border-radius:999px}
+  header.nav.on-dark:not(.scrolled) .menu-btn{border-color:rgba(255,255,255,.4)}
+
+  @media (max-width:900px){
+    .navlinks{display:none}
+    .nav-cta .btn{display:none}
+    .menu-btn{display:inline-flex}
+  }
+
+  /* mobile nav overlay */
+  .mobile-nav{position:fixed;inset:0;background:var(--paper);z-index:60;display:flex;flex-direction:column;padding:28px 32px;opacity:0;pointer-events:none;transition:opacity .35s ease}
+  .mobile-nav.open{opacity:1;pointer-events:auto}
+  .mobile-nav .top{display:flex;justify-content:space-between;align-items:center}
+  .mobile-nav nav{flex:1;display:flex;flex-direction:column;justify-content:center;gap:18px;font-family:"Cormorant Garamond",serif;font-size:42px;line-height:1.1}
+  .mobile-nav nav a{text-decoration:none;color:var(--charcoal);transition:color .3s}
+  .mobile-nav nav a:hover{color:var(--accent-gold)}
+  .mobile-nav .foot{padding-top:24px;border-top:1px solid var(--line-soft);display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--subtle)}
+
+  /* placeholder photo (subtle striped, no AI svg) */
+  .ph{position:relative;overflow:hidden;background:#e9e3d5;color:#7a7264;display:flex;align-items:flex-end;padding:18px;font-family:"JetBrains Mono",ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+  .ph::before{content:"";position:absolute;inset:0;background:
+    repeating-linear-gradient(135deg, rgba(0,0,0,.04) 0 1px, transparent 1px 14px),
+    linear-gradient(160deg,#ece5d4,#d9d1bd 60%,#cdc4ad);
+  }
+  .ph::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 80% at 30% 30%, rgba(255,255,255,.5), transparent 60%)}
+  .ph > *{position:relative;z-index:1}
+  .ph .tag{background:rgba(255,255,255,.7);backdrop-filter:blur(6px);padding:6px 10px;border-radius:4px}
+  .ph-blue{background:#1F4E79;color:rgba(255,255,255,.85)}
+  .ph-blue::before{background:
+    repeating-linear-gradient(135deg, rgba(255,255,255,.05) 0 1px, transparent 1px 14px),
+    linear-gradient(160deg,#23578a,#1F4E79 55%,#163958);
+  }
+  .ph-blue::after{background:radial-gradient(120% 80% at 30% 30%, rgba(255,255,255,.18), transparent 60%)}
+  .ph-blue .tag{background:rgba(0,0,0,.25);color:#fff}
+
+  /* HERO */
+  .hero{position:relative;min-height:100vh;color:#fff;overflow:hidden;display:flex;align-items:flex-end;padding:200px 0 96px}
+  .hero .bg{position:absolute;inset:0;z-index:0}
+  .hero .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(22,57,88,.35) 0%, rgba(22,57,88,.55) 60%, rgba(15,30,46,.85) 100%)}
+  .hero .meta{position:absolute;top:104px;left:0;right:0;padding:0 32px;display:flex;justify-content:space-between;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.78);z-index:2;max-width:1240px;margin:0 auto;left:50%;transform:translateX(-50%);width:100%}
+  @media (max-width:900px){.hero{padding-top:160px}.hero .meta{top:84px;font-size:10px}}
+  .hero .meta .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--accent-gold);margin-right:10px;vertical-align:middle}
+  .hero .content{position:relative;z-index:2;width:100%}
+  .hero h1{color:#fff;max-width:18ch;font-weight:300;font-size:clamp(38px,5.6vw,76px)}
+  .hero h1 em{font-style:italic;color:var(--accent-gold-soft);font-weight:300}
+  .hero .sub{margin-top:28px;max-width:46ch;color:rgba(255,255,255,.88);font-family:"Cormorant Garamond",serif;font-weight:300;font-size:clamp(19px,1.6vw,22px);line-height:1.5}
+  .hero .actions{margin-top:44px;display:flex;gap:14px;flex-wrap:wrap}
+  .hero .scroll-cue{position:absolute;bottom:32px;right:32px;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.7);z-index:2;display:flex;align-items:center;gap:10px}
+  .hero .scroll-cue::after{content:"";width:40px;height:1px;background:rgba(255,255,255,.5)}
+
+  /* pillars */
+  .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)}
+  .pillar{padding:48px 36px;border-right:1px solid var(--line-soft);transition:background .4s ease}
+  .pillar:last-child{border-right:0}
+  .pillar:hover{background:#fff}
+  .pillar .num{font-family:"Cormorant Garamond",serif;font-style:italic;color:var(--accent-gold);font-size:18px;margin-bottom:32px;display:flex;justify-content:space-between;align-items:center}
+  .pillar h3{margin-bottom:14px;font-size:30px}
+  .pillar p{color:var(--subtle);font-size:15px;line-height:1.65;margin-bottom:28px}
+  .pillar .more{font-size:12px;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;color:var(--charcoal);border-bottom:1px solid var(--charcoal);padding-bottom:4px;display:inline-block;transition:all .3s}
+  .pillar .more:hover{color:var(--accent-gold);border-color:var(--accent-gold)}
+  @media (max-width:900px){.pillars{grid-template-columns:1fr}.pillar{border-right:0;border-bottom:1px solid var(--line-soft)}}
+
+  /* trust row */
+  .trust{display:grid;grid-template-columns:repeat(4,1fr);gap:0;background:var(--cream);border-radius:24px;padding:6px}
+  .trust .cell{padding:36px 28px;border-right:1px solid rgba(34,34,34,.08)}
+  .trust .cell:last-child{border-right:0}
+  .trust .cell h4{font-size:24px;margin-bottom:8px}
+  .trust .cell p{font-size:14px;color:var(--subtle);line-height:1.55}
+  .trust .cell .ico{width:38px;height:38px;border:1px solid var(--brand-blue);color:var(--brand-blue);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:22px}
+  @media (max-width:900px){.trust{grid-template-columns:1fr 1fr}.trust .cell{border-right:0;border-bottom:1px solid rgba(34,34,34,.08)}.trust .cell:nth-child(odd){border-right:1px solid rgba(34,34,34,.08)}.trust .cell:nth-last-child(-n+2){border-bottom:0}}
+
+  /* cities */
+  .cities{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line-soft);border-left:1px solid var(--line-soft)}
+  .cities .city{padding:42px 32px;border-right:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);display:flex;justify-content:space-between;align-items:baseline;transition:background .35s}
+  .cities .city:hover{background:var(--cream)}
+  .cities .city .name{font-family:"Cormorant Garamond",serif;font-size:30px}
+  .cities .city .code{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.18em;color:var(--subtle)}
+  @media (max-width:700px){.cities{grid-template-columns:1fr 1fr}}
+
+  /* logos */
+  .logos{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)}
+  .logos .slot{aspect-ratio:5/3;border-right:1px solid var(--line-soft);display:flex;align-items:center;justify-content:center;position:relative;color:var(--subtle);font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.22em;text-transform:uppercase}
+  .logos .slot:last-child{border-right:0}
+  .logos .slot .pl{font-family:"Cormorant Garamond",serif;font-size:22px;color:#bbb;letter-spacing:0;text-transform:none;font-style:italic}
+  .logos .slot .badge{position:absolute;top:14px;right:14px;font-size:9px;letter-spacing:.2em;color:var(--subtle)}
+  @media (max-width:800px){.logos{grid-template-columns:1fr 1fr 1fr}.logos .slot:nth-child(3){border-right:0}}
+
+  /* CTA band */
+  .cta-band{background:var(--cream);text-align:center;padding:140px 32px}
+  .cta-band h2{max-width:18ch;margin:0 auto 36px;font-weight:300}
+  .cta-band h2 em{font-style:italic;color:var(--brand-blue)}
+
+  /* services alt-rows */
+  .svc-row{display:grid;grid-template-columns:1.05fr 1fr;gap:80px;align-items:center;padding:60px 0}
+  .svc-row.flip{grid-template-columns:1fr 1.05fr}
+  .svc-row.flip .svc-text{order:2}
+  .svc-row .svc-image{aspect-ratio:4/5;border-radius:6px;overflow:hidden}
+  .svc-row .svc-text .label{display:flex;align-items:center;gap:14px;color:var(--accent-gold);font-family:"Cormorant Garamond",serif;font-style:italic;font-size:18px;margin-bottom:16px}
+  .svc-row .svc-text .label::before{content:"";width:36px;height:1px;background:var(--accent-gold)}
+  .svc-row .svc-text h2{margin-bottom:24px}
+  .svc-row .svc-text > p{color:#3a3a3a;font-size:17px;line-height:1.7;margin-bottom:36px;max-width:54ch}
+  .svc-row .svc-text h4{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--brand-blue);font-family:"Inter",sans-serif;font-weight:600;margin-bottom:18px}
+  .incl{list-style:none;padding:0;margin:0 0 36px;display:grid;gap:14px}
+  .incl li{display:flex;gap:14px;font-size:15px;color:#3a3a3a;line-height:1.55}
+  .incl li::before{content:"";width:6px;height:6px;background:var(--accent-gold);border-radius:50%;margin-top:9px;flex-shrink:0}
+  .pkg{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:36px}
+  .pkg .card{padding:24px;background:#fff;border:1px solid var(--line-soft);border-radius:18px;transition:all .35s}
+  .pkg .card:hover{box-shadow:var(--shadow-md);transform:translateY(-2px)}
+  .pkg .card .name{font-family:"Cormorant Garamond",serif;font-size:22px;margin-bottom:6px}
+  .pkg .card .price{font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--accent-gold);letter-spacing:.1em;margin-bottom:14px}
+  .pkg .card p{font-size:13px;color:var(--subtle);line-height:1.55}
+  .ratios{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:36px}
+  .ratios .r{padding:18px;border:1px solid var(--line-soft);border-radius:14px;background:#fff}
+  .ratios .r .ages{font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--subtle);letter-spacing:.1em;margin-bottom:6px}
+  .ratios .r .num{font-family:"Cormorant Garamond",serif;font-size:32px;color:var(--brand-blue)}
+  .price-line{padding:20px 0;border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);display:flex;justify-content:space-between;align-items:baseline;font-size:14px;color:var(--subtle);margin-bottom:36px}
+  .price-line strong{font-family:"Cormorant Garamond",serif;font-weight:500;color:var(--charcoal);font-size:20px}
+
+  @media (max-width:900px){.svc-row,.svc-row.flip{grid-template-columns:1fr;gap:40px}.svc-row.flip .svc-text{order:0}.pkg,.ratios{grid-template-columns:1fr}}
+
+  /* faq accordion */
+  .faq{max-width:840px;margin:0 auto}
+  .faq details{border-top:1px solid var(--line);padding:24px 0;cursor:pointer}
+  .faq details:last-child{border-bottom:1px solid var(--line)}
+  .faq summary{display:flex;justify-content:space-between;align-items:center;list-style:none;font-family:"Cormorant Garamond",serif;font-size:24px;color:var(--charcoal);gap:24px}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary .plus{width:32px;height:32px;border:1px solid var(--line);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;transition:transform .35s,background .35s,color .35s,border-color .35s;font-size:18px;color:var(--subtle)}
+  .faq details[open] summary .plus{transform:rotate(45deg);background:var(--brand-blue);color:#fff;border-color:var(--brand-blue)}
+  .faq .answer{padding:18px 0 4px;color:var(--subtle);font-size:16px;max-width:60ch;line-height:1.7}
+
+  /* about */
+  .story{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px;align-items:start}
+  .story .ph{aspect-ratio:4/5;border-radius:6px}
+  .story .text p{font-size:17px;line-height:1.75;margin-bottom:18px;color:#333}
+  .story .signature{margin-top:32px;font-family:"Cormorant Garamond",serif;font-style:italic;font-size:24px;color:var(--brand-blue)}
+  @media (max-width:900px){.story{grid-template-columns:1fr;gap:36px}}
+
+  .principles{display:grid;grid-template-columns:repeat(3,1fr);gap:48px}
+  .principles .p{}
+  .principles .p .num{font-family:"Cormorant Garamond",serif;font-style:italic;color:var(--accent-gold);font-size:42px;line-height:1;margin-bottom:24px}
+  .principles .p h3{font-size:26px;margin-bottom:14px;line-height:1.2;max-width:18ch}
+  .principles .p p{color:var(--subtle);font-size:15px;line-height:1.7}
+  @media (max-width:900px){.principles{grid-template-columns:1fr;gap:36px}}
+
+  .team{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+  .team .card{}
+  .team .card .ph{aspect-ratio:4/5;border-radius:6px;margin-bottom:20px}
+  .team .card h4{font-family:"Cormorant Garamond",serif;font-size:24px;margin-bottom:4px}
+  .team .card .role{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent-gold);margin-bottom:14px}
+  .team .card p{color:var(--subtle);font-size:14px;line-height:1.6}
+  @media (max-width:800px){.team{grid-template-columns:1fr}}
+
+  /* vendors */
+  .why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border-top:1px solid var(--line-soft);border-left:1px solid var(--line-soft)}
+  .why-grid .cell{padding:48px 40px;border-right:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)}
+  .why-grid .cell .num{font-family:"JetBrains Mono",monospace;color:var(--accent-gold);font-size:11px;letter-spacing:.18em;margin-bottom:22px}
+  .why-grid .cell h3{font-size:26px;margin-bottom:12px;max-width:18ch}
+  .why-grid .cell p{color:var(--subtle);font-size:15px;line-height:1.65;max-width:46ch}
+  @media (max-width:800px){.why-grid{grid-template-columns:1fr}}
+
+  .checks{display:grid;grid-template-columns:repeat(2,1fr);gap:18px 36px;list-style:none;padding:0;margin:0}
+  .checks li{display:flex;gap:16px;font-size:16px;align-items:flex-start;padding:18px 0;border-bottom:1px solid var(--line-soft)}
+  .checks .check{width:24px;height:24px;border-radius:50%;background:var(--brand-blue);color:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+  @media (max-width:700px){.checks{grid-template-columns:1fr}}
+
+  .venues{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line-soft);border-left:1px solid var(--line-soft)}
+  .venues .v{padding:36px 28px;border-right:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);font-family:"Cormorant Garamond",serif;font-size:24px;color:var(--charcoal);text-align:center;display:flex;align-items:center;justify-content:center;min-height:120px;letter-spacing:.01em}
+  @media (max-width:800px){.venues{grid-template-columns:1fr 1fr}}
+  @media (max-width:500px){.venues{grid-template-columns:1fr}}
+
+  /* contact */
+  .contact-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:80px}
+  @media (max-width:900px){.contact-grid{grid-template-columns:1fr;gap:48px}}
+  .form{display:grid;gap:22px}
+  .field{display:grid;gap:8px}
+  .field-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media (max-width:700px){.field-row{grid-template-columns:1fr}}
+  .field label{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--subtle);font-weight:500}
+  .field input,.field textarea,.field select{font:inherit;font-size:15px;padding:14px 16px;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--charcoal);transition:border-color .25s,box-shadow .25s;width:100%}
+  .field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--brand-blue);box-shadow:0 0 0 4px rgba(31,78,121,.1)}
+  .field textarea{min-height:120px;resize:vertical;font-family:inherit}
+  .checks-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  @media (max-width:600px){.checks-row{grid-template-columns:1fr}}
+  .checkbox{position:relative;display:flex;align-items:center;gap:14px;padding:18px 20px;border:1px solid var(--line);border-radius:12px;cursor:pointer;font-size:14px;letter-spacing:.01em;transition:all .3s ease;background:#fff;min-height:60px;user-select:none}
+  .checkbox:hover{border-color:var(--brand-blue);transform:translateY(-1px);box-shadow:0 4px 14px rgba(20,30,50,.05)}
+  .checkbox input{position:absolute;opacity:0;pointer-events:none}
+  .checkbox .box{width:18px;height:18px;border-radius:5px;border:1.5px solid var(--line);display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .25s ease;background:#fff}
+  .checkbox .box svg{opacity:0;transform:scale(.6);transition:all .25s ease;color:#fff}
+  .checkbox.checked{border-color:var(--brand-blue);background:rgba(31,78,121,.035)}
+  .checkbox.checked .box{background:var(--brand-blue);border-color:var(--brand-blue)}
+  .checkbox.checked .box svg{opacity:1;transform:scale(1)}
+  .checkbox span.lbl{flex:1;line-height:1.3}
+  .field-error{color:#a04646;font-size:12px}
+
+  .info-side{padding:36px;background:var(--cream);border-radius:18px;display:flex;flex-direction:column;gap:28px;align-self:start}
+  .info-side h4{font-family:"Inter",sans-serif;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--subtle);font-weight:500;margin-bottom:8px}
+  .info-side .email{font-family:"Cormorant Garamond",serif;font-size:28px;color:var(--brand-blue);text-decoration:none;letter-spacing:.005em}
+  .info-side p{font-size:14px;color:#3a3a3a;line-height:1.6}
+  .info-side ul{list-style:none;padding:0;margin:0;display:grid;gap:6px;font-size:14px;color:#3a3a3a}
+
+  /* success */
+  .success{padding:48px;background:var(--cream);border-radius:18px;text-align:center}
+  .success .check-big{width:64px;height:64px;border-radius:50%;background:var(--brand-blue);color:#fff;display:flex;align-items:center;justify-content:center;margin:0 auto 24px}
+  .success h3{font-size:32px;margin-bottom:12px}
+  .success p{color:var(--subtle);margin-bottom:28px}
+
+  /* footer */
+  footer.foot{background:var(--brand-blue-deep);color:rgba(255,255,255,.78);padding:80px 0 32px}
+  footer.foot a{color:inherit;text-decoration:none;transition:color .25s}
+  footer.foot a:hover{color:var(--accent-gold)}
+  .foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:48px;padding-bottom:60px;border-bottom:1px solid rgba(255,255,255,.12)}
+  @media (max-width:800px){.foot-grid{grid-template-columns:1fr 1fr;gap:36px}}
+  .foot-logo{font-family:"Cormorant Garamond",serif;font-size:30px;color:#fff;letter-spacing:.02em;margin-bottom:14px;display:block}
+  .foot-logo .amp{color:var(--accent-gold);font-style:italic}
+  .foot-grid h5{font-family:"Inter",sans-serif;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.55);font-weight:500;margin:0 0 18px}
+  .foot-grid ul{list-style:none;padding:0;margin:0;display:grid;gap:10px;font-size:14px}
+  .foot-bottom{padding-top:28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;font-size:12px;color:rgba(255,255,255,.5);letter-spacing:.04em}
+  .socials{display:flex;gap:14px}
+  .socials a{width:36px;height:36px;border:1px solid rgba(255,255,255,.18);border-radius:50%;display:inline-flex;align-items:center;justify-content:center}
+  .socials a:hover{border-color:var(--accent-gold)}
+
+  /* page transitions */
+  .page{animation:fade .55s cubic-bezier(.2,.7,.2,1) both}
+  @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+  /* small util */
+  .marquee-meta{display:flex;justify-content:space-between;font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.18em;color:var(--subtle);text-transform:uppercase;margin-bottom:64px}
+  .section-head{margin-bottom:72px;display:grid;grid-template-columns:1fr 1.4fr;gap:48px;align-items:end}
+  .section-head h2{max-width:18ch;font-weight:300}
+  .section-head h2 em{font-style:italic;color:var(--accent-gold)}
+  .section-head .desc{color:var(--subtle);font-size:16px;line-height:1.6;max-width:48ch}
+  @media (max-width:800px){.section-head{grid-template-columns:1fr;gap:18px}}
+
+  .center{text-align:center}
+  .pgnum{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.22em;color:var(--subtle);text-transform:uppercase}
+
+  /* subtle entry animation for in-view */
+  [data-rev]{opacity:0;transform:translateY(20px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+  [data-rev].in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="wrap bar">
+    <a href="#/" class="logo" data-link>
+      <span>Aisle</span><span class="amp">&amp;</span><span>Co.</span>
+    </a>
+    <nav class="navlinks" id="navlinks">
+      <a href="#/" data-link>Home</a>
+      <a href="#/services" data-link>Services</a>
+      <a href="#/about" data-link>About</a>
+      <a href="#/for-vendors" data-link>For Venues &amp; Planners</a>
+      <a href="#/contact" data-link>Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="#/contact" data-link>Request a Quote <span class="arrow">→</span></a>
+      <button class="menu-btn" aria-label="Open menu" id="menuBtn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><line x1="4" y1="8" x2="20" y2="8"/><line x1="4" y1="16" x2="20" y2="16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <div class="top">
+    <a href="#/" class="logo" data-link>Aisle<span class="amp">&amp;</span>Co.</a>
+    <button class="menu-btn" aria-label="Close menu" id="closeBtn">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><line x1="6" y1="6" x2="18" y2="18"/><line x1="6" y1="18" x2="18" y2="6"/></svg>
+    </button>
+  </div>
+  <nav>
+    <a href="#/" data-link>Home</a>
+    <a href="#/services" data-link>Services</a>
+    <a href="#/about" data-link>About</a>
+    <a href="#/for-vendors" data-link>For Venues &amp; Planners</a>
+    <a href="#/contact" data-link>Contact</a>
+  </nav>
+  <div class="foot">
+    <span>hello@aisleand.co</span>
+    <a class="btn btn-primary" href="#/contact" data-link>Request a Quote</a>
+  </div>
+</div>
+
+<main id="app"></main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="#/" class="foot-logo" data-link>Aisle<span class="amp">&amp;</span>Co.</a>
+        <p style="max-width:34ch;font-size:14px;line-height:1.65;color:rgba(255,255,255,.65)">Wedding-day care for your littlest guests — two-legged and four. Northeast Florida.</p>
+        <div class="socials" style="margin-top:24px">
+          <a href="#" aria-label="Instagram"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="Pinterest"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M11 8c2-1 5 0 5 3s-2 4-3 4-2-1-2-1l-1 5"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="8" y1="10" x2="8" y2="17"/><circle cx="8" cy="7" r=".8" fill="currentColor"/><path d="M12 17v-4a2 2 0 1 1 4 0v4"/><line x1="12" y1="10" x2="12" y2="17"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h5>Explore</h5>
+        <ul>
+          <li><a href="#/services" data-link>Services</a></li>
+          <li><a href="#/about" data-link>About</a></li>
+          <li><a href="#/for-vendors" data-link>For Vendors</a></li>
+          <li><a href="#/contact" data-link>Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Service area</h5>
+        <ul>
+          <li>Jacksonville</li>
+          <li>St. Augustine</li>
+          <li>Ponte Vedra</li>
+          <li>Amelia Island</li>
+          <li>Palm Coast · Daytona</li>
+        </ul>
+      </div>
+      <div>
+        <h5>Get in touch</h5>
+        <ul>
+          <li><a href="mailto:hello@aisleand.co">hello@aisleand.co</a></li>
+          <li>Replies within 24 hours</li>
+          <li><a href="#/contact" data-link>Request a quote →</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Aisle &amp; Co.</span>
+      <span style="display:flex;gap:24px"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">COI on request</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ---------------- ROUTER ---------------- */
+const app = document.getElementById('app');
+const navEl = document.getElementById('nav');
+const navLinksEl = document.getElementById('navlinks');
+const mobileNav = document.getElementById('mobileNav');
+const menuBtn = document.getElementById('menuBtn');
+const closeBtn = document.getElementById('closeBtn');
+
+menuBtn.addEventListener('click', () => mobileNav.classList.add('open'));
+closeBtn.addEventListener('click', () => mobileNav.classList.remove('open'));
+
+function setActive(route){
+  document.querySelectorAll('[data-link]').forEach(a => {
+    const href = a.getAttribute('href').replace('#','');
+    a.classList.toggle('active', href === route);
+  });
+}
+
+function onScroll(){
+  if(window.scrollY > 16) navEl.classList.add('scrolled');
+  else navEl.classList.remove('scrolled');
+}
+window.addEventListener('scroll', onScroll, {passive:true});
+
+function observeReveal(){
+  const els = document.querySelectorAll('[data-rev]');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  }, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
+  els.forEach(el => io.observe(el));
+}
+
+/* ---------------- PAGES ---------------- */
+
+const PAGE_HOME = () => `
+<div class="page">
+  <section class="hero" style="padding-top:0">
+    <div class="bg ph" aria-hidden="true">
+      <span class="tag">Placeholder · Wedding venue, golden hour</span>
+    </div>
+    <div class="meta">
+      <span><span class="dot"></span>Northeast Florida · Est. 2026</span>
+      <span>N° 001 — Home</span>
+    </div>
+    <div class="wrap content" data-rev>
+      <div class="eyebrow" style="color:rgba(255,255,255,.7);margin-bottom:28px">Wedding-day specialists</div>
+      <h1 class="serif">Wedding-day care for your <em>littlest guests</em> — two-legged and four.</h1>
+      <p class="sub">Trained, insured, wedding-day specialists serving the Northeast Florida wedding corridor — from St. Augustine to Amelia Island.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#/contact" data-link>Request a Quote <span class="arrow">→</span></a>
+        <a class="btn btn-outline" href="#/services" data-link>See Services</a>
+      </div>
+    </div>
+    <div class="scroll-cue">Scroll</div>
+  </section>
+
+  <!-- THREE PILLARS -->
+  <section>
+    <div class="wrap">
+      <div class="marquee-meta" data-rev>
+        <span>§ 01 — What we do</span>
+        <span>Three quiet specialties</span>
+      </div>
+      <div class="section-head" data-rev>
+        <h2>The wedding day, <em>looked after.</em></h2>
+        <p class="desc">A small, deliberate menu of services for couples who hired us because they don't want to think about it. One team. One contract. One person on the radio.</p>
+      </div>
+      <div class="pillars" data-rev>
+        <div class="pillar">
+          <div class="num"><span>I</span><span>—</span></div>
+          <h3>Aisle Sitters</h3>
+          <p>On-site, dedicated kids-room childcare during your ceremony and reception. Drop them off; we handle the rest.</p>
+          <a class="more" href="#/services" data-link>Learn more →</a>
+        </div>
+        <div class="pillar">
+          <div class="num"><span>II</span><span>—</span></div>
+          <h3>Pet of Honor</h3>
+          <p>A handler who picks up your pet, brings them for ceremony and photos, and gets them home safely.</p>
+          <a class="more" href="#/services" data-link>Learn more →</a>
+        </div>
+        <div class="pillar">
+          <div class="num"><span>III</span><span>—</span></div>
+          <h3>Wedding Weekend Care</h3>
+          <p>One contract, one team — rehearsal dinner sitting through Sunday brunch.</p>
+          <a class="more" href="#/services" data-link>Learn more →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST -->
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="marquee-meta" data-rev>
+        <span>§ 02 — Why couples and venues trust us</span>
+        <span>Credentials over claims</span>
+      </div>
+      <div class="trust" data-rev>
+        <div class="cell">
+          <div class="ico">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l8 3v5c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-3z"/></svg>
+          </div>
+          <h4>Insured</h4>
+          <p>$1M general liability + pet-care rider, COI for every venue.</p>
+        </div>
+        <div class="cell">
+          <div class="ico">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="9" r="3.5"/><path d="M5 20a7 7 0 0 1 14 0"/></svg>
+          </div>
+          <h4>Background-checked</h4>
+          <p>AHCA Level 2 fingerprint screening for every childcare team member.</p>
+        </div>
+        <div class="cell">
+          <div class="ico">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/></svg>
+          </div>
+          <h4>CPR-certified</h4>
+          <p>Pediatric CPR &amp; First Aid for our childcare leads.</p>
+        </div>
+        <div class="cell">
+          <div class="ico">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 7h16M6 7l1 12h10l1-12M9 11v5M15 11v5"/></svg>
+          </div>
+          <h4>Wedding-trained</h4>
+          <p>We work weddings — we run the kids' room, we coordinate with photographers, we don't improvise.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHERE -->
+  <section>
+    <div class="wrap">
+      <div class="marquee-meta" data-rev>
+        <span>§ 03 — Where we work</span>
+        <span>The Northeast Florida corridor</span>
+      </div>
+      <div class="section-head" data-rev>
+        <h2>From <em>St. Augustine</em> to <em>Amelia Island.</em></h2>
+        <p class="desc">Premium venues across the Northeast Florida corridor. Travel beyond 25 miles is billed simply at $1.50/mile.</p>
+      </div>
+      <div class="cities" data-rev>
+        ${[
+          ['Jacksonville','JAX · 30°N'],
+          ['St. Augustine','SGJ · Historic'],
+          ['Ponte Vedra','TPC · Coastal'],
+          ['Amelia Island','FHB · Barrier'],
+          ['Palm Coast','PCM · Flagler'],
+          ['Daytona Beach','DAB · Volusia']
+        ].map(([n,c])=>`<div class="city"><span class="name">${n}</span><span class="code">${c}</span></div>`).join('')}
+      </div>
+    </div>
+  </section>
+
+  <!-- LOGOS -->
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="marquee-meta" data-rev>
+        <span>§ 04 — Trusted by</span>
+        <span>Partner roster · 2026</span>
+      </div>
+      <div class="logos" data-rev>
+        ${['Venue No. 1','Venue No. 2','Venue No. 3','Venue No. 4','Venue No. 5'].map(v=>`
+          <div class="slot">
+            <span class="badge">Coming soon</span>
+            <span class="pl">${v}</span>
+          </div>`).join('')}
+      </div>
+      <p class="center" style="margin-top:24px;color:var(--subtle);font-size:13px">We are actively building our preferred-vendor relationships across Northeast Florida.</p>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="cta-band" data-rev>
+    <span class="pgnum" style="display:block;margin-bottom:32px">— Let's talk —</span>
+    <h2>Let's give your littlest guests their <em>best wedding day.</em></h2>
+    <a class="btn btn-primary" href="#/contact" data-link>Request a Quote <span class="arrow">→</span></a>
+  </section>
+</div>`;
+
+const PAGE_SERVICES = () => `
+<div class="page">
+  <section style="padding-top:160px;padding-bottom:64px">
+    <div class="wrap">
+      <span class="pgnum" data-rev>N° 002 — Services</span>
+      <div data-rev style="margin-top:24px;display:grid;grid-template-columns:1.2fr 1fr;gap:64px;align-items:end">
+        <h1 class="serif" style="font-weight:300;max-width:14ch">Three services. <em style="font-style:italic;color:var(--accent-gold)">One team.</em></h1>
+        <p class="lede" style="max-width:48ch">Built deliberately for the rhythm of a wedding day — drop-off through last dance, pickup through pillow.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:24px">
+    <div class="wrap">
+      <!-- AISLE SITTERS -->
+      <div class="svc-row" data-rev>
+        <div class="svc-image ph">
+          <span class="tag">Placeholder · Kids' room at venue</span>
+        </div>
+        <div class="svc-text">
+          <div class="label">Service One</div>
+          <h2>Aisle Sitters.</h2>
+          <p>A dedicated kids' room (or zone) at the venue, staffed by Aisle &amp; Co. sitters from cocktail hour through reception end. Parents drop off, sitters take over, parents enjoy the reception.</p>
+          <h4>What's included</h4>
+          <ul class="incl">
+            <li>Dedicated lead sitter as parent point of contact</li>
+            <li>Branded activity kit per child</li>
+            <li>Movie / iPad station and quiet wind-down zone</li>
+            <li>Parent text check-ins every 60–90 minutes</li>
+            <li>Coordination with catering for kids' meals</li>
+          </ul>
+          <h4>Sitter ratios</h4>
+          <div class="ratios">
+            <div class="r"><div class="ages">Ages 0–2</div><div class="num">1 : 2</div></div>
+            <div class="r"><div class="ages">Ages 3–6</div><div class="num">1 : 4</div></div>
+            <div class="r"><div class="ages">Ages 7–12</div><div class="num">1 : 6</div></div>
+          </div>
+          <div class="price-line"><span>Starts at <strong>$390</strong> · 4-hr min, 1 sitter</span><span>Typical 8-kid event $800–1,000</span></div>
+          <a class="btn btn-outline-dark" href="#/contact" data-link>Inquire about Aisle Sitters <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <!-- PET OF HONOR -->
+      <div class="svc-row flip" data-rev>
+        <div class="svc-text">
+          <div class="label">Service Two</div>
+          <h2>Pet of Honor.</h2>
+          <p>A dedicated, insured handler picks up your pet, brings them for ceremony and photos, and returns them home before the reception starts. Hands-free, stress-free.</p>
+          <div class="pkg">
+            <div class="card">
+              <div class="name">Standard</div>
+              <div class="price">$475</div>
+              <p>Pickup, ceremony attendance, photos, return home, supplies.</p>
+            </div>
+            <div class="card">
+              <div class="name">Premium</div>
+              <div class="price">$695</div>
+              <p>Standard + reception cameo, grooming touchup, custom collar/leash.</p>
+            </div>
+            <div class="card">
+              <div class="name">Weekend</div>
+              <div class="price">$1,275</div>
+              <p>Friday rehearsal + Saturday ceremony/photos + Friday &amp; Saturday overnight pet sitting.</p>
+            </div>
+          </div>
+          <a class="btn btn-outline-dark" href="#/contact" data-link>Inquire about Pet of Honor <span class="arrow">→</span></a>
+        </div>
+        <div class="svc-image ph">
+          <span class="tag">Placeholder · Well-dressed dog, ceremony</span>
+        </div>
+      </div>
+
+      <!-- WEEKEND CARE -->
+      <div class="svc-row" data-rev>
+        <div class="svc-image ph ph-blue">
+          <span class="tag">Placeholder · Coastal venue, late afternoon</span>
+        </div>
+        <div class="svc-text">
+          <div class="label">Service Three</div>
+          <h2>Wedding Weekend Care.</h2>
+          <p>For destination couples whose families fly in Thursday and stay through Sunday brunch. One contract, one team, one point of contact.</p>
+          <div class="pkg">
+            <div class="card">
+              <div class="name">Starter</div>
+              <div class="price">$1,500–2,000</div>
+              <p>Rehearsal dinner sitting + 6-hour wedding-day childcare.</p>
+            </div>
+            <div class="card">
+              <div class="name">Signature</div>
+              <div class="price">$2,000–2,800</div>
+              <p>Starter + Pet of Honor Standard + Sunday brunch sitting.</p>
+            </div>
+            <div class="card">
+              <div class="name">Concierge</div>
+              <div class="price">$2,800–3,500+</div>
+              <p>Signature + Premium Pet + extended hours + dedicated coordinator.</p>
+            </div>
+          </div>
+          <a class="btn btn-outline-dark" href="#/contact" data-link>Inquire about Weekend Care <span class="arrow">→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section style="background:var(--cream)">
+    <div class="wrap">
+      <div class="marquee-meta" data-rev>
+        <span>§ — Frequently asked</span>
+        <span>Plain answers</span>
+      </div>
+      <div class="section-head" data-rev style="margin-bottom:48px">
+        <h2>Questions, <em>answered honestly.</em></h2>
+        <p class="desc">If you don't see yours here, write us — a real human reads every email and replies within 24 hours.</p>
+      </div>
+      <div class="faq" data-rev>
+        ${[
+          ['How far in advance should we book?','We recommend booking when you book your venue. October Saturdays in St. Augustine sell out 6+ months ahead.'],
+          ['Are you insured?','Yes — $1M general liability with a pet-care rider. We name your venue as additional insured on the COI.'],
+          ['What\u2019s your cancellation policy?','More than 60 days out we keep 25%; 30–60 days, 50%; under 30 days, 100%. Hurricane / venue closure equals a date-transfer credit.'],
+          ['Do you provide everything?','Yes — activity kits, supplies, water, treats, even a portable nap zone if needed. You don\u2019t bring a thing.'],
+          ['Where do you serve?','All of Northeast Florida: Jacksonville, St. Augustine, Ponte Vedra, Amelia Island, Palm Coast, Daytona Beach. Travel beyond 25 miles from venue is $1.50/mile.']
+        ].map(([q,a])=>`
+          <details>
+            <summary>${q}<span class="plus">+</span></summary>
+            <p class="answer">${a}</p>
+          </details>`).join('')}
+      </div>
+    </div>
+  </section>
+</div>`;
+
+const PAGE_ABOUT = () => `
+<div class="page">
+  <section style="padding-top:200px;padding-bottom:120px;text-align:center">
+    <div class="wrap-narrow" data-rev>
+      <span class="pgnum">N° 003 — About</span>
+      <h1 style="margin-top:24px;font-weight:300">Built for the day <em style="font-style:italic;color:var(--accent-gold)">that matters most.</em></h1>
+      <p class="lede" style="margin:28px auto 0;max-width:54ch">Aisle &amp; Co. exists because everyone at a wedding deserves to actually enjoy it — including the smallest guests.</p>
+    </div>
+  </section>
+
+  <section style="padding-top:0;background:var(--cream)">
+    <div class="wrap">
+      <div class="marquee-meta" data-rev>
+        <span>§ — The story</span>
+        <span>How we got here</span>
+      </div>
+      <div class="story" data-rev>
+        <div class="ph">
+          <span class="tag">Placeholder · Founder portrait</span>
+        </div>
+        <div class="text">
+          <h2 style="margin-bottom:32px;font-weight:300">A wedding planner who used to be a <em style="font-style:italic;color:var(--brand-blue)">hospital nurse.</em></h2>
+          <p>Aisle &amp; Co. began at the back of a coastal venue, in October, with a six-year-old in a flower crown asking when she could go back to the dance floor. The bride was on the patio. The planner was on a radio. Nobody on payroll was actually <em>watching</em> the kids.</p>
+          <p>The founder, Kyle, had spent a decade between pediatric care, in-home pet sitting, and large-format events. He'd seen the gap from every side. Northeast Florida — with its destination weddings, coastal venues, and 18-month booking calendars — had no dedicated, insured, wedding-day-specific care option. Plenty of babysitters. Plenty of dog walkers. Nobody who knew that the photographer needs the dog at 4:42, not 5:00.</p>
+          <p>So he built the team he wished he'd had on the radio that night. Background-checked. CPR-certified. Trained on a manual that exists. Insured to the standard a Ritz coordinator will actually accept.</p>
+          <p>That's the whole story. We hope to be a small footnote in yours.</p>
+          <div class="signature">— Kyle, Founder</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="marquee-meta" data-rev>
+        <span>§ — What we believe</span>
+        <span>Three principles</span>
+      </div>
+      <div class="section-head" data-rev style="margin-bottom:80px">
+        <h2>What we <em>actually believe.</em></h2>
+        <p class="desc">Three things we won't compromise on, written plainly.</p>
+      </div>
+      <div class="principles" data-rev>
+        <div class="p">
+          <div class="num">i.</div>
+          <h3>Care is a credential, not a vibe.</h3>
+          <p>We screen, train, and certify every team member. Background checks, pediatric CPR, and our Aisle &amp; Co. Sitter Manual are non-negotiable.</p>
+        </div>
+        <div class="p">
+          <div class="num">ii.</div>
+          <h3>The kids' room is part of the wedding.</h3>
+          <p>Not an afterthought. We coordinate with the planner, the photographer, and the catering team so that nothing breaks the flow of the day.</p>
+        </div>
+        <div class="p">
+          <div class="num">iii.</div>
+          <h3>Pets are family — and they need a pro.</h3>
+          <p>A wedding is overstimulating for any animal. Our handlers know when to push them onto the dance floor for the photo and when to take them home.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="marquee-meta" data-rev>
+        <span>§ — The team</span>
+        <span>Small, deliberate, growing</span>
+      </div>
+      <div class="section-head" data-rev style="margin-bottom:48px">
+        <h2>People on the <em>radio.</em></h2>
+        <p class="desc">A small team by design. Every wedding day is led by a senior operator, not a substitute.</p>
+      </div>
+      <div class="team" data-rev>
+        ${[
+          ['Kyle','Founder · Operations','Pediatric care, pet care, and large-format events. Reads every contract.'],
+          ['Lead Sitter Captain','To be announced','Heads the kids\u2019 room. Pediatric CPR, AHCA Level 2, and the Aisle &amp; Co. Sitter Manual.'],
+          ['Pet of Honor Lead','To be announced','Pet First Aid–certified. Knows the difference between a stressed dog and a tired one.']
+        ].map(([n,r,b])=>`
+          <div class="card">
+            <div class="ph"><span class="tag">Placeholder · Portrait</span></div>
+            <h4>${n}</h4>
+            <div class="role">${r}</div>
+            <p>${b}</p>
+          </div>`).join('')}
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band" data-rev>
+    <span class="pgnum" style="display:block;margin-bottom:32px">— Let's talk —</span>
+    <h2>If this sounds like the team you'd want on <em>your</em> radio.</h2>
+    <a class="btn btn-primary" href="#/contact" data-link>Request a Quote <span class="arrow">→</span></a>
+  </section>
+</div>`;
+
+const PAGE_VENDORS = () => `
+<div class="page">
+  <section style="padding-top:160px;padding-bottom:80px">
+    <div class="wrap">
+      <span class="pgnum" data-rev>N° 004 — For Venues &amp; Planners</span>
+      <div data-rev style="margin-top:24px;display:grid;grid-template-columns:1.3fr 1fr;gap:64px;align-items:end">
+        <h1 style="font-weight:300;max-width:18ch">Make your couples' day easier. <em style="font-style:italic;color:var(--accent-gold)">Get on the right side of the kids' room conversation.</em></h1>
+        <p class="lede" style="max-width:46ch">Aisle &amp; Co. is the wedding-day care partner for premium venues and planners across Northeast Florida.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="marquee-meta" data-rev>
+        <span>§ — Why partner with us</span>
+        <span>Four reasons, plainly</span>
+      </div>
+      <div class="why-grid" data-rev>
+        <div class="cell">
+          <div class="num">/01</div>
+          <h3>Insured to your standard.</h3>
+          <p>$1M GL, pet rider, COI naming your venue as additional insured.</p>
+        </div>
+        <div class="cell">
+          <div class="num">/02</div>
+          <h3>Single point of contact.</h3>
+          <p>One operator for kids and pets. No chasing multiple vendors the week of.</p>
+        </div>
+        <div class="cell">
+          <div class="num">/03</div>
+          <h3>Coordinated with your timeline.</h3>
+          <p>Pre-event call, T-3 brief, on-site 60 minutes before guests arrive.</p>
+        </div>
+        <div class="cell">
+          <div class="num">/04</div>
+          <h3>Branded for your couple.</h3>
+          <p>Optional co-branded "Family-Friendly Wedding" insert for your welcome packet.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head" data-rev>
+        <h2>What we <em>provide</em> partners.</h2>
+        <p class="desc">Materials and rituals to make recommending us as easy as forwarding an email.</p>
+      </div>
+      <ul class="checks" data-rev>
+        ${[
+          ['Sample COI','PDF, ready to attach to your vendor packet'],
+          ['Vendor packet PDF','Pricing, timeline, and process at a glance'],
+          ['Planner referral commission','We pay on every booked weekend'],
+          ['Quarterly planner brunch','Standing invitation. Real coffee, no slide deck.']
+        ].map(([t,d])=>`
+          <li>
+            <span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="5 12 10 17 19 8"/></svg></span>
+            <span><strong style="font-weight:500">${t}.</strong> <span style="color:var(--subtle)">${d}.</span></span>
+          </li>`).join('')}
+      </ul>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="marquee-meta" data-rev>
+        <span>§ — Currently pursuing partnerships with</span>
+        <span>Northeast Florida · 2026</span>
+      </div>
+      <div class="venues" data-rev>
+        ${['Treasury Group','Omni Amelia Island','Ritz-Carlton Amelia','Sawgrass Marriott','Hammock Beach','Epping Forest'].map(v=>`<div class="v">${v}</div>`).join('')}
+      </div>
+      <p class="center" style="margin-top:32px;color:var(--subtle);font-size:14px;max-width:60ch;margin-left:auto;margin-right:auto">We are actively building our preferred-vendor relationships across Northeast Florida — let's talk.</p>
+    </div>
+  </section>
+
+  <!-- VENDOR FORM -->
+  <section style="background:var(--cream)">
+    <div class="wrap-narrow">
+      <div class="section-head" data-rev style="grid-template-columns:1fr;text-align:left;margin-bottom:40px">
+        <span class="pgnum">— Request the packet —</span>
+        <h2 style="margin-top:16px">Request a <em>Vendor Packet.</em></h2>
+        <p class="desc">Pricing, sample COI, sample timeline, and the planner referral terms — sent within 24 hours.</p>
+      </div>
+      <div id="vendorFormHost" data-rev></div>
+    </div>
+  </section>
+</div>`;
+
+const PAGE_CONTACT = () => `
+<div class="page">
+  <section style="padding-top:160px;padding-bottom:64px">
+    <div class="wrap">
+      <span class="pgnum" data-rev>N° 005 — Contact</span>
+      <div data-rev style="margin-top:24px;display:grid;grid-template-columns:1.3fr 1fr;gap:64px;align-items:end">
+        <h1 style="font-weight:300;max-width:14ch">Tell us about your <em style="font-style:italic;color:var(--accent-gold)">wedding day.</em></h1>
+        <p class="lede" style="max-width:46ch">We respond to every inquiry within 24 hours — direct human responses, not chatbots.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:24px">
+    <div class="wrap">
+      <div class="contact-grid">
+        <div data-rev id="contactFormHost"></div>
+        <aside class="info-side" data-rev>
+          <div>
+            <h4>Email</h4>
+            <a href="mailto:hello@aisleand.co" class="email">hello@aisleand.co</a>
+          </div>
+          <div class="rule"></div>
+          <div>
+            <h4>Response time</h4>
+            <p>Within 24 hours, often sooner. We're a small team — direct human responses, not chatbots.</p>
+          </div>
+          <div class="rule"></div>
+          <div>
+            <h4>Service area</h4>
+            <ul>
+              <li>Jacksonville</li>
+              <li>St. Augustine</li>
+              <li>Ponte Vedra</li>
+              <li>Amelia Island</li>
+              <li>Palm Coast</li>
+              <li>Daytona Beach</li>
+            </ul>
+          </div>
+          <div class="rule"></div>
+          <div>
+            <h4>For venues &amp; planners</h4>
+            <p>Looking for a vendor packet or to be added to our preferred-partner roster? <a href="#/for-vendors" data-link style="color:var(--brand-blue);text-decoration:underline">Visit the partners page →</a></p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+</div>`;
+
+/* ---------------- FORMS ---------------- */
+function mountContactForm(host){
+  host.innerHTML = `
+    <form class="form" id="contactForm" novalidate>
+      <div class="field-row">
+        <div class="field"><label>Your name</label><input name="name" type="text" required /></div>
+        <div class="field"><label>Email</label><input name="email" type="email" required /></div>
+      </div>
+      <div class="field-row">
+        <div class="field"><label>Phone (optional)</label><input name="phone" type="tel" /></div>
+        <div class="field"><label>Wedding date</label><input name="date" type="date" /></div>
+      </div>
+      <div class="field"><label>Venue</label><input name="venue" type="text" placeholder="e.g. The Treasury, St. Augustine" /></div>
+      <div class="field-row">
+        <div class="field"><label>Number of children (optional)</label><input name="kids" type="number" min="0" /></div>
+        <div class="field"><label>Number of pets (optional)</label><input name="pets" type="number" min="0" /></div>
+      </div>
+      <div class="field">
+        <label>Services interested in</label>
+        <div class="checks-row">
+          ${['Aisle Sitters','Pet of Honor','Wedding Weekend Care','Not sure yet'].map(s=>`
+            <label class="checkbox"><input type="checkbox" name="svc" value="${s}" /><span class="box"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="5 12 10 17 19 8"/></svg></span><span class="lbl">${s}</span></label>`).join('')}
+        </div>
+      </div>
+      <div class="field"><label>Tell us about your day</label><textarea name="msg" placeholder="Date, venue, headcount, anything we should know."></textarea></div>
+      <div style="display:flex;align-items:center;gap:16px;margin-top:8px;flex-wrap:wrap">
+        <button class="btn btn-primary" type="submit" id="contactSubmit">Send Inquiry <span class="arrow">→</span></button>
+        <span style="color:var(--subtle);font-size:13px">We reply within 24 hours.</span>
+      </div>
+    </form>`;
+  const form = document.getElementById('contactForm');
+  // checkbox visual state
+  form.querySelectorAll('.checkbox input').forEach(i=>{
+    i.addEventListener('change', e => e.target.parentElement.classList.toggle('checked', e.target.checked));
+  });
+  form.addEventListener('submit', async (e)=>{
+    e.preventDefault();
+    const btn = document.getElementById('contactSubmit');
+    btn.innerHTML = 'Sending…';
+    btn.disabled = true;
+    // Wire to HoneyBook / Resend / Formspree before launch
+    const data = Object.fromEntries(new FormData(form).entries());
+    console.log('[/api/inquiry] payload', data);
+    await new Promise(r => setTimeout(r, 700));
+    host.innerHTML = `
+      <div class="success">
+        <div class="check-big"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="5 12 10 17 19 8"/></svg></div>
+        <h3>Thanks — we'll be in touch within 24 hours.</h3>
+        <p>You'll get a reply from a real person at hello@aisleand.co.</p>
+        <a class="btn btn-outline-dark" href="#/" data-link>Back to home</a>
+      </div>`;
+    bindLinks();
+  });
+}
+
+function mountVendorForm(host){
+  host.innerHTML = `
+    <form class="form" id="vendorForm" novalidate>
+      <div class="field-row">
+        <div class="field"><label>Name</label><input name="name" type="text" required /></div>
+        <div class="field"><label>Email</label><input name="email" type="email" required /></div>
+      </div>
+      <div class="field"><label>Venue / Firm name</label><input name="firm" type="text" required /></div>
+      <div class="field"><label>Role</label>
+        <select name="role">
+          <option>Planner</option>
+          <option>Venue Coordinator</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="field"><label>Message (optional)</label><textarea name="msg" placeholder="Anything we should know about your couples or calendar."></textarea></div>
+      <div style="display:flex;align-items:center;gap:16px;margin-top:8px;flex-wrap:wrap">
+        <button class="btn btn-primary" type="submit" id="vendorSubmit">Send me the packet <span class="arrow">→</span></button>
+        <span style="color:var(--subtle);font-size:13px">We reply within 24 hours.</span>
+      </div>
+    </form>`;
+  const form = document.getElementById('vendorForm');
+  form.addEventListener('submit', async (e)=>{
+    e.preventDefault();
+    const btn = document.getElementById('vendorSubmit');
+    btn.innerHTML = 'Sending…';
+    btn.disabled = true;
+    const data = Object.fromEntries(new FormData(form).entries());
+    console.log('[/api/vendor] payload', data);
+    await new Promise(r => setTimeout(r, 700));
+    host.innerHTML = `
+      <div class="success">
+        <div class="check-big"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="5 12 10 17 19 8"/></svg></div>
+        <h3>We'll be in touch within 24 hours.</h3>
+        <p>The packet, sample COI, and referral terms — straight to your inbox.</p>
+        <a class="btn btn-outline-dark" href="#/" data-link>Back to home</a>
+      </div>`;
+    bindLinks();
+  });
+}
+
+/* ---------------- ROUTING ---------------- */
+const routes = {
+  '/': PAGE_HOME,
+  '/services': PAGE_SERVICES,
+  '/about': PAGE_ABOUT,
+  '/for-vendors': PAGE_VENDORS,
+  '/contact': PAGE_CONTACT
+};
+
+function render(){
+  const r = (location.hash.replace('#','') || '/');
+  const route = routes[r] ? r : '/';
+  app.innerHTML = routes[route]();
+  setActive(route);
+  navEl.classList.toggle('on-dark', route === '/');
+  mobileNav.classList.remove('open');
+  // mount any forms
+  const cf = document.getElementById('contactFormHost');
+  if(cf) mountContactForm(cf);
+  const vf = document.getElementById('vendorFormHost');
+  if(vf) mountVendorForm(vf);
+  bindLinks();
+  observeReveal();
+  window.scrollTo({top:0,behavior:'instant'});
+  onScroll();
+}
+
+function bindLinks(){
+  document.querySelectorAll('[data-link]').forEach(a=>{
+    a.onclick = (e)=>{
+      const href = a.getAttribute('href');
+      if(href && href.startsWith('#/')){
+        e.preventDefault();
+        if(location.hash !== href){ location.hash = href; }
+        else { render(); }
+      }
+    };
+  });
+}
+
+window.addEventListener('hashchange', render);
+render();
+</script>
+
+</body>
+</html>
