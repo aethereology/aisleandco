@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import { Nav } from "@/components/layout/Nav";
+import { Footer } from "@/components/layout/Footer";
 
 const cormorant = Cormorant_Garamond({
   variable: "--font-cormorant",
@@ -24,9 +26,6 @@ export const metadata: Metadata = {
   title: "Aisle & Co. — Wedding-day care for your littlest guests",
   description: "Trained, insured wedding-day childcare and pet handling across Northeast Florida.",
 };
-
-import { Nav } from "@/components/layout/Nav";
-import { Footer } from "@/components/layout/Footer";
 
 export default function RootLayout({
   children,
