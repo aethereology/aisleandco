@@ -3,7 +3,14 @@
     "allow": [
       "Bash(ls -la .vercel)",
       "Bash(cat .vercel/project.json)",
-      "Bash(npm run *)"
+      "Bash(npm run *)",
+      "Bash(git add *)",
+      "Bash(vercel ls *)",
+      "Bash(vercel inspect *)",
+      "Bash(vercel project *)",
+      "Bash(vercel env *)",
+      "Bash(vercel build *)",
+      "Bash(vercel pull *)"
     ]
   }
 }
