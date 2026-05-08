@@ -32,9 +32,9 @@ export default function Home() {
         </div>
         <div className="absolute top-[104px] md:top-[84px] left-1/2 -translate-x-1/2 w-full max-w-[1240px] px-8 flex justify-between text-[11px] md:text-[10px] tracking-[0.22em] uppercase text-[rgba(255,255,255,0.78)] z-10">
           <span><span className="inline-block w-1.5 h-1.5 rounded-full bg-accent-gold mr-2.5 align-middle"></span>Northeast Florida · Est. 2026</span>
-          <span>N° 001 — Home</span>
+          <span className="hidden sm:inline">N° 001 — Home</span>
         </div>
-        <Reveal className="relative z-10 w-full max-w-[1240px] mx-auto px-8">
+        <Reveal className="relative z-10 w-full max-w-[1240px] mx-auto px-5 sm:px-8">
           <div className="font-sans text-[11px] tracking-[0.22em] uppercase text-[rgba(255,255,255,0.7)] font-medium mb-7">Wedding-day specialists</div>
           <h1 className="font-serif text-[clamp(38px,5.6vw,76px)] leading-[1.02] max-w-[18ch] font-light text-white mb-0">Wedding-day care for your <em className="italic text-accent-gold-soft font-light">littlest guests</em> — two-legged and four.</h1>
           <p className="mt-7 max-w-[46ch] text-[rgba(255,255,255,0.88)] font-serif font-light text-[clamp(19px,1.6vw,22px)] leading-[1.5]">Trained, insured, wedding-day specialists serving the Northeast Florida wedding corridor — from St. Augustine to Amelia Island.</p>
@@ -48,8 +48,8 @@ export default function Home() {
 
       {/* THREE PILLARS */}
       <section className="py-[clamp(72px,10vw,140px)]">
-        <div className="max-w-[1240px] mx-auto px-8">
-          <Reveal className="flex justify-between font-mono text-[11px] tracking-[0.18em] text-subtle uppercase mb-16">
+        <div className="max-w-[1240px] mx-auto px-5 sm:px-8">
+          <Reveal className="flex flex-col sm:flex-row justify-between gap-1 sm:gap-0 font-mono text-[11px] tracking-[0.18em] text-subtle uppercase mb-10 md:mb-16">
             <span>§ 01 — What we do</span>
             <span>Three quiet specialties</span>
           </Reveal>
@@ -82,8 +82,8 @@ export default function Home() {
 
       {/* TRUST */}
       <section className="pb-[clamp(72px,10vw,140px)] pt-0">
-        <div className="max-w-[1240px] mx-auto px-8">
-          <Reveal className="flex justify-between font-mono text-[11px] tracking-[0.18em] text-subtle uppercase mb-16">
+        <div className="max-w-[1240px] mx-auto px-5 sm:px-8">
+          <Reveal className="flex flex-col sm:flex-row justify-between gap-1 sm:gap-0 font-mono text-[11px] tracking-[0.18em] text-subtle uppercase mb-10 md:mb-16">
             <span>§ 02 — Why couples and venues trust us</span>
             <span>Credentials over claims</span>
           </Reveal>
@@ -122,8 +122,8 @@ export default function Home() {
 
       {/* WHERE */}
       <section className="py-[clamp(72px,10vw,140px)]">
-        <div className="max-w-[1240px] mx-auto px-8">
-          <Reveal className="flex justify-between font-mono text-[11px] tracking-[0.18em] text-subtle uppercase mb-16">
+        <div className="max-w-[1240px] mx-auto px-5 sm:px-8">
+          <Reveal className="flex flex-col sm:flex-row justify-between gap-1 sm:gap-0 font-mono text-[11px] tracking-[0.18em] text-subtle uppercase mb-10 md:mb-16">
             <span>§ 03 — Where we work</span>
             <span>The Northeast Florida corridor</span>
           </Reveal>
@@ -144,8 +144,8 @@ export default function Home() {
 
       {/* LOGOS */}
       <section className="pb-[clamp(72px,10vw,140px)] pt-0">
-        <div className="max-w-[1240px] mx-auto px-8">
-          <Reveal className="flex justify-between font-mono text-[11px] tracking-[0.18em] text-subtle uppercase mb-16">
+        <div className="max-w-[1240px] mx-auto px-5 sm:px-8">
+          <Reveal className="flex flex-col sm:flex-row justify-between gap-1 sm:gap-0 font-mono text-[11px] tracking-[0.18em] text-subtle uppercase mb-10 md:mb-16">
             <span>§ 04 — Trusted by</span>
             <span>Partner roster · 2026</span>
           </Reveal>

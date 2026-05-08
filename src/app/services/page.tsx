@@ -15,9 +15,9 @@ export default function Services() {
   return (
     <div className="animate-[fade_0.55s_cubic-bezier(0.2,0.7,0.2,1)_both]">
       <section className="pt-[160px] pb-16">
-        <div className="max-w-[1240px] mx-auto px-8">
+        <div className="max-w-[1240px] mx-auto px-5 sm:px-8">
           <Reveal className="font-mono text-[11px] tracking-[0.22em] text-subtle uppercase">N° 002 — Services</Reveal>
-          <Reveal className="mt-6 grid grid-cols-1 md:grid-cols-[1.2fr_1fr] gap-16 items-end">
+          <Reveal className="mt-6 grid grid-cols-1 md:grid-cols-[1.2fr_1fr] gap-6 md:gap-16 items-end">
             <h1 className="font-serif text-[clamp(40px,6.2vw,84px)] leading-[1.02] max-w-[14ch] font-light text-charcoal m-0">Three services. <em className="italic text-accent-gold">One team.</em></h1>
             <p className="font-serif text-[clamp(20px,2.2vw,26px)] leading-[1.45] text-[#3a3a3a] font-light max-w-[48ch]">Built deliberately for the rhythm of a wedding day — drop-off through last dance, pickup through pillow.</p>
           </Reveal>
@@ -25,7 +25,7 @@ export default function Services() {
       </section>
 
       <section className="pt-6 pb-[clamp(72px,10vw,140px)]">
-        <div className="max-w-[1240px] mx-auto px-8">
+        <div className="max-w-[1240px] mx-auto px-5 sm:px-8">
           {/* AISLE SITTERS */}
           <Reveal className="grid grid-cols-1 md:grid-cols-[1.05fr_1fr] gap-10 md:gap-20 items-center py-15">
             <Placeholder text="Placeholder · Kids' room at venue" className="aspect-[4/5] rounded-md w-full" />
@@ -133,8 +133,8 @@ export default function Services() {
 
       {/* FAQ */}
       <section className="bg-cream py-[clamp(72px,10vw,140px)]">
-        <div className="max-w-[1240px] mx-auto px-8">
-          <Reveal className="flex justify-between font-mono text-[11px] tracking-[0.18em] text-subtle uppercase mb-16">
+        <div className="max-w-[1240px] mx-auto px-5 sm:px-8">
+          <Reveal className="flex flex-col sm:flex-row justify-between gap-1 sm:gap-0 font-mono text-[11px] tracking-[0.18em] text-subtle uppercase mb-10 md:mb-16">
             <span>§ — Frequently asked</span>
             <span>Plain answers</span>
           </Reveal>

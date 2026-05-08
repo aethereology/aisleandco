@@ -10,8 +10,8 @@ export default function About() {
 
   return (
     <div className="animate-[fade_0.55s_cubic-bezier(0.2,0.7,0.2,1)_both]">
-      <section className="pt-[200px] pb-[120px] text-center">
-        <Reveal className="max-w-[980px] mx-auto px-8">
+      <section className="pt-[140px] pb-16 md:pt-[200px] md:pb-[120px] text-center">
+        <Reveal className="max-w-[980px] mx-auto px-5 sm:px-8">
           <span className="font-mono text-[11px] tracking-[0.22em] text-subtle uppercase">N° 003 — About</span>
           <h1 className="mt-6 font-serif text-[clamp(40px,6.2vw,84px)] leading-[1.02] font-light text-charcoal">Built for the day <em className="italic text-accent-gold">that matters most.</em></h1>
           <p className="font-serif font-light text-[clamp(20px,2.2vw,26px)] leading-[1.45] text-[#3a3a3a] mt-7 mx-auto max-w-[54ch]">Aisle &amp; Co. exists because everyone at a wedding deserves to actually enjoy it — including the smallest guests.</p>
@@ -19,8 +19,8 @@ export default function About() {
       </section>
 
       <section className="bg-cream py-[clamp(72px,10vw,140px)] pt-0">
-        <div className="max-w-[1240px] mx-auto px-8">
-          <Reveal className="flex justify-between font-mono text-[11px] tracking-[0.18em] text-subtle uppercase mb-16">
+        <div className="max-w-[1240px] mx-auto px-5 sm:px-8">
+          <Reveal className="flex flex-col sm:flex-row justify-between gap-1 sm:gap-0 font-mono text-[11px] tracking-[0.18em] text-subtle uppercase mb-10 md:mb-16">
             <span>§ — The story</span>
             <span>How we got here</span>
           </Reveal>
@@ -41,8 +41,8 @@ export default function About() {
       </section>
 
       <section className="py-[clamp(72px,10vw,140px)]">
-        <div className="max-w-[1240px] mx-auto px-8">
-          <Reveal className="flex justify-between font-mono text-[11px] tracking-[0.18em] text-subtle uppercase mb-16">
+        <div className="max-w-[1240px] mx-auto px-5 sm:px-8">
+          <Reveal className="flex flex-col sm:flex-row justify-between gap-1 sm:gap-0 font-mono text-[11px] tracking-[0.18em] text-subtle uppercase mb-10 md:mb-16">
             <span>§ — What we believe</span>
             <span>Three principles</span>
           </Reveal>
@@ -71,8 +71,8 @@ export default function About() {
       </section>
 
       <section className="pb-[clamp(72px,10vw,140px)] pt-0">
-        <div className="max-w-[1240px] mx-auto px-8">
-          <Reveal className="flex justify-between font-mono text-[11px] tracking-[0.18em] text-subtle uppercase mb-16">
+        <div className="max-w-[1240px] mx-auto px-5 sm:px-8">
+          <Reveal className="flex flex-col sm:flex-row justify-between gap-1 sm:gap-0 font-mono text-[11px] tracking-[0.18em] text-subtle uppercase mb-10 md:mb-16">
             <span>§ — The team</span>
             <span>Small, deliberate, growing</span>
           </Reveal>

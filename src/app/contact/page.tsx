@@ -18,9 +18,9 @@ export default function Contact() {
   return (
     <div className="animate-[fade_0.55s_cubic-bezier(0.2,0.7,0.2,1)_both]">
       <section className="pt-[160px] pb-16">
-        <div className="max-w-[1240px] mx-auto px-8">
+        <div className="max-w-[1240px] mx-auto px-5 sm:px-8">
           <Reveal className="font-mono text-[11px] tracking-[0.22em] text-subtle uppercase">N° 005 — Contact</Reveal>
-          <Reveal className="mt-6 grid grid-cols-1 md:grid-cols-[1.3fr_1fr] gap-16 items-end">
+          <Reveal className="mt-6 grid grid-cols-1 md:grid-cols-[1.3fr_1fr] gap-6 md:gap-16 items-end">
             <h1 className="font-serif text-[clamp(40px,6.2vw,84px)] leading-[1.02] max-w-[14ch] font-light text-charcoal">Tell us about your <em className="italic text-accent-gold">wedding day.</em></h1>
             <p className="font-serif text-[clamp(20px,2.2vw,26px)] leading-[1.45] text-[#3a3a3a] font-light max-w-[46ch]">We respond to every inquiry within 24 hours — direct human responses, not chatbots.</p>
           </Reveal>
@@ -28,8 +28,8 @@ export default function Contact() {
       </section>
 
       <section className="pt-6 pb-[clamp(72px,10vw,140px)]">
-        <div className="max-w-[1240px] mx-auto px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-12 lg:gap-20">
+        <div className="max-w-[1240px] mx-auto px-5 sm:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-10 lg:gap-20">
             <Reveal>
               <form className="grid gap-[22px]">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-[18px]">
@@ -70,7 +70,7 @@ export default function Contact() {
               </form>
             </Reveal>
 
-            <Reveal as="aside" className="p-9 bg-cream rounded-[18px] flex flex-col gap-7 self-start">
+            <Reveal as="aside" className="p-6 sm:p-9 bg-cream rounded-[18px] flex flex-col gap-7 self-start">
               <div>
                 <h4 className="font-sans text-[11px] tracking-[0.2em] uppercase text-subtle font-medium mb-2">Email</h4>
                 <a href="mailto:hello@aisleand.co" className="font-serif text-[28px] text-brand-blue no-underline tracking-[0.005em] transition-colors hover:text-accent-gold">hello@aisleand.co</a>

@@ -7,9 +7,9 @@ export default function ForVendors() {
   return (
     <div className="animate-[fade_0.55s_cubic-bezier(0.2,0.7,0.2,1)_both]">
       <section className="pt-[160px] pb-20">
-        <div className="max-w-[1240px] mx-auto px-8">
+        <div className="max-w-[1240px] mx-auto px-5 sm:px-8">
           <Reveal className="font-mono text-[11px] tracking-[0.22em] text-subtle uppercase">N° 004 — For Venues & Planners</Reveal>
-          <Reveal className="mt-6 grid grid-cols-1 md:grid-cols-[1.3fr_1fr] gap-16 items-end">
+          <Reveal className="mt-6 grid grid-cols-1 md:grid-cols-[1.3fr_1fr] gap-6 md:gap-16 items-end">
             <h1 className="font-serif text-[clamp(40px,6.2vw,84px)] leading-[1.02] max-w-[18ch] font-light text-charcoal">Make your couples' day easier. <em className="italic text-accent-gold">Get on the right side of the kids' room conversation.</em></h1>
             <p className="font-serif text-[clamp(20px,2.2vw,26px)] leading-[1.45] text-[#3a3a3a] font-light max-w-[46ch]">Aisle & Co. is the wedding-day care partner for premium venues and planners across Northeast Florida.</p>
           </Reveal>
@@ -17,8 +17,8 @@ export default function ForVendors() {
       </section>
 
       <section className="pt-0 pb-[clamp(72px,10vw,140px)]">
-        <div className="max-w-[1240px] mx-auto px-8">
-          <Reveal className="flex justify-between font-mono text-[11px] tracking-[0.18em] text-subtle uppercase mb-16">
+        <div className="max-w-[1240px] mx-auto px-5 sm:px-8">
+          <Reveal className="flex flex-col sm:flex-row justify-between gap-1 sm:gap-0 font-mono text-[11px] tracking-[0.18em] text-subtle uppercase mb-10 md:mb-16">
             <span>§ — Why partner with us</span>
             <span>Four reasons, plainly</span>
           </Reveal>
@@ -48,7 +48,7 @@ export default function ForVendors() {
       </section>
 
       <section className="py-[clamp(72px,10vw,140px)]">
-        <div className="max-w-[1240px] mx-auto px-8">
+        <div className="max-w-[1240px] mx-auto px-5 sm:px-8">
           <Reveal className="mb-[72px] grid grid-cols-1 md:grid-cols-[1fr_1.4fr] gap-[18px] md:gap-12 items-end">
             <h2 className="font-serif text-[clamp(32px,4.4vw,56px)] leading-[1.05] max-w-[18ch] font-light text-charcoal">What we <em className="italic text-accent-gold">provide</em> partners.</h2>
             <p className="text-subtle text-base leading-[1.6] max-w-[48ch]">Materials and rituals to make recommending us as easy as forwarding an email.</p>
@@ -74,8 +74,8 @@ export default function ForVendors() {
       </section>
 
       <section className="pb-[clamp(72px,10vw,140px)] pt-0">
-        <div className="max-w-[1240px] mx-auto px-8">
-          <Reveal className="flex justify-between font-mono text-[11px] tracking-[0.18em] text-subtle uppercase mb-16">
+        <div className="max-w-[1240px] mx-auto px-5 sm:px-8">
+          <Reveal className="flex flex-col sm:flex-row justify-between gap-1 sm:gap-0 font-mono text-[11px] tracking-[0.18em] text-subtle uppercase mb-10 md:mb-16">
             <span>§ — Currently pursuing partnerships with</span>
             <span>Northeast Florida · 2026</span>
           </Reveal>
@@ -91,7 +91,7 @@ export default function ForVendors() {
       </section>
 
       <section className="bg-cream py-[clamp(72px,10vw,140px)]">
-        <div className="max-w-[980px] mx-auto px-8">
+        <div className="max-w-[980px] mx-auto px-5 sm:px-8">
           <Reveal className="mb-10 text-left">
             <span className="font-mono text-[11px] tracking-[0.22em] text-subtle uppercase">— Request the packet —</span>
             <h2 className="mt-4 font-serif text-[clamp(32px,4.4vw,56px)] leading-[1.05] font-light text-charcoal">Request a <em className="italic text-brand-blue">Vendor Packet.</em></h2>
