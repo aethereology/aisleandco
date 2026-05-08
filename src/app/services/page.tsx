@@ -49,15 +49,15 @@ export default function Services() {
 
               <h4 className="text-[13px] tracking-[0.18em] uppercase text-brand-blue font-sans font-semibold mb-[18px]">Sitter ratios</h4>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 mb-9">
-                <div className="p-[18px] border border-line-soft rounded-[14px] bg-white">
+                <div className="group p-[18px] border border-line-soft rounded-[14px] bg-white transition-all duration-[400ms] hover:border-brand-blue/40 hover:shadow-sm">
                   <div className="font-mono text-[11px] text-subtle tracking-[0.1em] mb-1.5">Ages 0–2</div>
                   <div className="font-serif text-[32px] text-brand-blue">1 : 2</div>
                 </div>
-                <div className="p-[18px] border border-line-soft rounded-[14px] bg-white">
+                <div className="group p-[18px] border border-line-soft rounded-[14px] bg-white transition-all duration-[400ms] hover:border-brand-blue/40 hover:shadow-sm">
                   <div className="font-mono text-[11px] text-subtle tracking-[0.1em] mb-1.5">Ages 3–6</div>
                   <div className="font-serif text-[32px] text-brand-blue">1 : 4</div>
                 </div>
-                <div className="p-[18px] border border-line-soft rounded-[14px] bg-white">
+                <div className="group p-[18px] border border-line-soft rounded-[14px] bg-white transition-all duration-[400ms] hover:border-brand-blue/40 hover:shadow-sm">
                   <div className="font-mono text-[11px] text-subtle tracking-[0.1em] mb-1.5">Ages 7–12</div>
                   <div className="font-serif text-[32px] text-brand-blue">1 : 6</div>
                 </div>
@@ -79,17 +79,17 @@ export default function Services() {
               <p className="text-body text-[17px] leading-[1.7] mb-9 max-w-[54ch]">A dedicated, insured handler picks up your pet, brings them for ceremony and photos, and returns them home before the reception starts. Hands-free, stress-free.</p>
               
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 mb-9">
-                <div className="p-6 bg-white border border-line-soft rounded-[18px] transition-all duration-[350ms] hover:shadow-md hover:-translate-y-[2px]">
+                <div className="group relative overflow-hidden p-6 bg-white border border-line-soft rounded-[18px] transition-all duration-[450ms] hover:shadow-card hover:-translate-y-[3px] hover:border-accent-gold/40">
                   <div className="font-serif text-[22px] mb-1.5">Standard</div>
                   <div className="font-mono text-xs text-accent-gold tracking-[0.1em] mb-[14px]">$475</div>
                   <p className="text-[13px] text-subtle leading-[1.55]">Pickup, ceremony attendance, photos, return home, supplies.</p>
                 </div>
-                <div className="p-6 bg-white border border-line-soft rounded-[18px] transition-all duration-[350ms] hover:shadow-md hover:-translate-y-[2px]">
+                <div className="group relative overflow-hidden p-6 bg-white border border-line-soft rounded-[18px] transition-all duration-[450ms] hover:shadow-card hover:-translate-y-[3px] hover:border-accent-gold/40">
                   <div className="font-serif text-[22px] mb-1.5">Premium</div>
                   <div className="font-mono text-xs text-accent-gold tracking-[0.1em] mb-[14px]">$695</div>
                   <p className="text-[13px] text-subtle leading-[1.55]">Standard + reception cameo, grooming touchup, custom collar/leash.</p>
                 </div>
-                <div className="p-6 bg-white border border-line-soft rounded-[18px] transition-all duration-[350ms] hover:shadow-md hover:-translate-y-[2px]">
+                <div className="group relative overflow-hidden p-6 bg-white border border-line-soft rounded-[18px] transition-all duration-[450ms] hover:shadow-card hover:-translate-y-[3px] hover:border-accent-gold/40">
                   <div className="font-serif text-[22px] mb-1.5">Weekend</div>
                   <div className="font-mono text-xs text-accent-gold tracking-[0.1em] mb-[14px]">$1,275</div>
                   <p className="text-[13px] text-subtle leading-[1.55]">Friday rehearsal + Saturday ceremony/photos + Friday &amp; Saturday overnight pet sitting.</p>
@@ -109,17 +109,17 @@ export default function Services() {
               <p className="text-body text-[17px] leading-[1.7] mb-9 max-w-[54ch]">For destination couples whose families fly in Thursday and stay through Sunday brunch. One contract, one team, one point of contact.</p>
               
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 mb-9">
-                <div className="p-6 bg-white border border-line-soft rounded-[18px] transition-all duration-[350ms] hover:shadow-md hover:-translate-y-[2px]">
+                <div className="group relative overflow-hidden p-6 bg-white border border-line-soft rounded-[18px] transition-all duration-[450ms] hover:shadow-card hover:-translate-y-[3px] hover:border-accent-gold/40">
                   <div className="font-serif text-[22px] mb-1.5">Starter</div>
                   <div className="font-mono text-xs text-accent-gold tracking-[0.1em] mb-[14px]">$1,500–2,000</div>
                   <p className="text-[13px] text-subtle leading-[1.55]">Rehearsal dinner sitting + 6-hour wedding-day childcare.</p>
                 </div>
-                <div className="p-6 bg-white border border-line-soft rounded-[18px] transition-all duration-[350ms] hover:shadow-md hover:-translate-y-[2px]">
+                <div className="group relative overflow-hidden p-6 bg-white border border-line-soft rounded-[18px] transition-all duration-[450ms] hover:shadow-card hover:-translate-y-[3px] hover:border-accent-gold/40">
                   <div className="font-serif text-[22px] mb-1.5">Signature</div>
                   <div className="font-mono text-xs text-accent-gold tracking-[0.1em] mb-[14px]">$2,000–2,800</div>
                   <p className="text-[13px] text-subtle leading-[1.55]">Starter + Pet of Honor Standard + Sunday brunch sitting.</p>
                 </div>
-                <div className="p-6 bg-white border border-line-soft rounded-[18px] transition-all duration-[350ms] hover:shadow-md hover:-translate-y-[2px]">
+                <div className="group relative overflow-hidden p-6 bg-white border border-line-soft rounded-[18px] transition-all duration-[450ms] hover:shadow-card hover:-translate-y-[3px] hover:border-accent-gold/40">
                   <div className="font-serif text-[22px] mb-1.5">Concierge</div>
                   <div className="font-mono text-xs text-accent-gold tracking-[0.1em] mb-[14px]">$2,800–3,500+</div>
                   <p className="text-[13px] text-subtle leading-[1.55]">Signature + Premium Pet + extended hours + dedicated coordinator.</p>

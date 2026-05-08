@@ -16,34 +16,46 @@ export default function Home() {
   const venues = ['Venue No. 1', 'Venue No. 2', 'Venue No. 3', 'Venue No. 4', 'Venue No. 5'];
 
   return (
-    <div className="animate-[fade_0.55s_cubic-bezier(0.2,0.7,0.2,1)_both]">
+    <div className="animate-fade">
       <section className="relative min-h-screen text-white overflow-hidden flex items-end pt-[200px] pb-24 md:pt-[160px]">
-        <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 z-0 overflow-hidden">
           <video
             autoPlay
             loop
             muted
             playsInline
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover animate-ken-burns"
           >
             <source src="/wedding-bg.mp4" type="video/mp4" />
           </video>
           <div className="absolute inset-0 bg-gradient-to-b from-[rgba(22,57,88,0.35)] via-[rgba(22,57,88,0.55)] to-[rgba(15,30,46,0.85)]" />
+          <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(120%_80%_at_50%_30%,transparent,rgba(15,30,46,0.45))]" />
         </div>
-        <div className="absolute top-[104px] md:top-[84px] left-1/2 -translate-x-1/2 w-full max-w-[1240px] px-8 flex justify-between text-[11px] md:text-[10px] tracking-[0.22em] uppercase text-[rgba(255,255,255,0.78)] z-10">
-          <span><span className="inline-block w-1.5 h-1.5 rounded-full bg-accent-gold mr-2.5 align-middle"></span>Northeast Florida · Est. 2026</span>
+        <div className="absolute top-[104px] md:top-[84px] left-1/2 -translate-x-1/2 w-full max-w-[1240px] px-5 sm:px-8 flex justify-between text-[11px] md:text-[10px] tracking-[0.22em] uppercase text-[rgba(255,255,255,0.78)] z-10">
+          <span className="inline-flex items-center"><span className="relative inline-block w-1.5 h-1.5 rounded-full bg-accent-gold mr-2.5 pulse-gold"></span>Northeast Florida · Est. 2026</span>
           <span className="hidden sm:inline">N° 001 — Home</span>
         </div>
-        <Reveal className="relative z-10 w-full max-w-[1240px] mx-auto px-5 sm:px-8">
-          <div className="font-sans text-[11px] tracking-[0.22em] uppercase text-[rgba(255,255,255,0.7)] font-medium mb-7">Wedding-day specialists</div>
-          <h1 className="font-serif text-[clamp(38px,5.6vw,76px)] leading-[1.02] max-w-[18ch] font-light text-white mb-0">Wedding-day care for your <em className="italic text-accent-gold-soft font-light">littlest guests</em> — two-legged and four.</h1>
-          <p className="mt-7 max-w-[46ch] text-[rgba(255,255,255,0.88)] font-serif font-light text-[clamp(19px,1.6vw,22px)] leading-[1.5]">Trained, insured, wedding-day specialists serving the Northeast Florida wedding corridor — from St. Augustine to Amelia Island.</p>
-          <div className="mt-11 flex gap-3.5 flex-wrap">
-            <Button href="/contact" withArrow>Request a Quote</Button>
-            <Button href="/services" variant="outline">See Services</Button>
-          </div>
-        </Reveal>
-        <div className="absolute bottom-8 right-8 text-[11px] tracking-[0.22em] uppercase text-[rgba(255,255,255,0.7)] z-10 flex items-center gap-2.5 after:content-[''] after:w-10 after:h-px after:bg-[rgba(255,255,255,0.5)]">Scroll</div>
+        <div className="relative z-10 w-full max-w-[1240px] mx-auto px-5 sm:px-8">
+          <Reveal direction="fade">
+            <div className="font-sans text-[11px] tracking-[0.22em] uppercase text-[rgba(255,255,255,0.7)] font-medium mb-7">Wedding-day specialists</div>
+          </Reveal>
+          <Reveal delay={120}>
+            <h1 className="font-serif text-[clamp(38px,5.6vw,76px)] leading-[1.02] max-w-[18ch] font-light text-white mb-0">Wedding-day care for your <em className="italic text-accent-gold-soft font-light">littlest guests</em> — two-legged and four.</h1>
+          </Reveal>
+          <Reveal delay={260}>
+            <p className="mt-7 max-w-[46ch] text-[rgba(255,255,255,0.88)] font-serif font-light text-[clamp(19px,1.6vw,22px)] leading-[1.5]">Trained, insured, wedding-day specialists serving the Northeast Florida wedding corridor — from St. Augustine to Amelia Island.</p>
+          </Reveal>
+          <Reveal delay={400}>
+            <div className="mt-11 flex gap-3.5 flex-wrap">
+              <Button href="/contact" withArrow>Request a Quote</Button>
+              <Button href="/services" variant="outline">See Services</Button>
+            </div>
+          </Reveal>
+        </div>
+        <div className="absolute bottom-10 right-8 text-[10px] tracking-[0.28em] uppercase text-[rgba(255,255,255,0.7)] z-10 flex items-center gap-4">
+          <span>Scroll</span>
+          <div className="scroll-cue"></div>
+        </div>
       </section>
 
       {/* THREE PILLARS */}
@@ -58,24 +70,22 @@ export default function Home() {
             <p className="font-sans text-subtle text-base leading-[1.6] max-w-[48ch]">A small, deliberate menu of services for couples who hired us because they don't want to think about it. One team. One contract. One person on the radio.</p>
           </Reveal>
           <Reveal className="grid grid-cols-1 md:grid-cols-3 gap-0 border-y border-line-soft">
-            <div className="p-9 md:p-12 border-b md:border-b-0 md:border-r border-line-soft transition-colors duration-[400ms] hover:bg-white">
-              <div className="font-serif italic text-accent-gold text-lg mb-8 flex justify-between items-center"><span>I</span><span>—</span></div>
-              <h3 className="font-serif text-[clamp(22px,2.4vw,30px)] leading-[1.15] mb-3.5 text-charcoal">Aisle Sitters</h3>
-              <p className="font-sans text-subtle text-[15px] leading-[1.65] mb-7">On-site, dedicated kids-room childcare during your ceremony and reception. Drop them off; we handle the rest.</p>
-              <Link href="/services" className="text-xs tracking-[0.18em] uppercase text-charcoal border-b border-charcoal pb-1 inline-block transition-all duration-300 hover:text-accent-gold hover:border-accent-gold no-underline">Learn more →</Link>
-            </div>
-            <div className="p-9 md:p-12 border-b md:border-b-0 md:border-r border-line-soft transition-colors duration-[400ms] hover:bg-white">
-              <div className="font-serif italic text-accent-gold text-lg mb-8 flex justify-between items-center"><span>II</span><span>—</span></div>
-              <h3 className="font-serif text-[clamp(22px,2.4vw,30px)] leading-[1.15] mb-3.5 text-charcoal">Pet of Honor</h3>
-              <p className="font-sans text-subtle text-[15px] leading-[1.65] mb-7">A handler who picks up your pet, brings them for ceremony and photos, and gets them home safely.</p>
-              <Link href="/services" className="text-xs tracking-[0.18em] uppercase text-charcoal border-b border-charcoal pb-1 inline-block transition-all duration-300 hover:text-accent-gold hover:border-accent-gold no-underline">Learn more →</Link>
-            </div>
-            <div className="p-9 md:p-12 transition-colors duration-[400ms] hover:bg-white">
-              <div className="font-serif italic text-accent-gold text-lg mb-8 flex justify-between items-center"><span>III</span><span>—</span></div>
-              <h3 className="font-serif text-[clamp(22px,2.4vw,30px)] leading-[1.15] mb-3.5 text-charcoal">Wedding Weekend Care</h3>
-              <p className="font-sans text-subtle text-[15px] leading-[1.65] mb-7">One contract, one team — rehearsal dinner sitting through Sunday brunch.</p>
-              <Link href="/services" className="text-xs tracking-[0.18em] uppercase text-charcoal border-b border-charcoal pb-1 inline-block transition-all duration-300 hover:text-accent-gold hover:border-accent-gold no-underline">Learn more →</Link>
-            </div>
+            {[
+              { num: 'I', title: 'Aisle Sitters', desc: "On-site, dedicated kids-room childcare during your ceremony and reception. Drop them off; we handle the rest." },
+              { num: 'II', title: 'Pet of Honor', desc: "A handler who picks up your pet, brings them for ceremony and photos, and gets them home safely." },
+              { num: 'III', title: 'Wedding Weekend Care', desc: "One contract, one team — rehearsal dinner sitting through Sunday brunch." }
+            ].map((card, i, arr) => (
+              <div key={card.num} className={`group relative p-9 md:p-12 border-b border-line-soft transition-colors duration-[450ms] hover:bg-white ${i === arr.length - 1 ? 'md:border-b-0' : 'md:border-b-0'} ${i < arr.length - 1 ? 'md:border-r' : ''}`}>
+                <span className="gold-line top-0" />
+                <div className="font-serif italic text-accent-gold text-lg mb-8 flex justify-between items-center">
+                  <span className="transition-transform duration-[450ms] group-hover:translate-x-1">{card.num}</span>
+                  <span className="transition-all duration-[450ms] group-hover:w-12 w-3 h-px bg-accent-gold inline-block" />
+                </div>
+                <h3 className="font-serif text-[clamp(22px,2.4vw,30px)] leading-[1.15] mb-3.5 text-charcoal transition-colors duration-300 group-hover:text-brand-blue">{card.title}</h3>
+                <p className="font-sans text-subtle text-[15px] leading-[1.65] mb-7">{card.desc}</p>
+                <Link href="/services" className="text-xs tracking-[0.18em] uppercase text-charcoal border-b border-charcoal pb-1 inline-block transition-all duration-300 hover:text-accent-gold hover:border-accent-gold no-underline">Learn more →</Link>
+              </div>
+            ))}
           </Reveal>
         </div>
       </section>
@@ -88,34 +98,20 @@ export default function Home() {
             <span>Credentials over claims</span>
           </Reveal>
           <Reveal className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-0 bg-cream rounded-3xl p-1.5">
-            <div className="p-7 md:p-9 border-b sm:border-b-0 sm:border-r border-[rgba(34,34,34,0.08)]">
-              <div className="w-[38px] h-[38px] border border-brand-blue text-brand-blue rounded-full flex items-center justify-center mb-5.5">
-                <Shield className="w-4 h-4" />
+            {[
+              { Icon: Shield, title: 'Insured', desc: '$1M general liability + pet-care rider, COI for every venue.', borders: 'border-b sm:border-b-0 sm:border-r' },
+              { Icon: ShieldCheck, title: 'Background-checked', desc: 'AHCA Level 2 fingerprint screening for every childcare team member.', borders: 'border-b md:border-b-0 md:border-r' },
+              { Icon: Heart, title: 'CPR-certified', desc: 'Pediatric CPR & First Aid for our childcare leads.', borders: 'border-b sm:border-b-0 sm:border-r' },
+              { Icon: Users, title: 'Wedding-trained', desc: "We work weddings — we run the kids' room, we coordinate with photographers, we don't improvise.", borders: '' }
+            ].map(({ Icon, title, desc, borders }) => (
+              <div key={title} className={`group p-7 md:p-9 transition-colors duration-[400ms] hover:bg-white/60 ${borders} border-[rgba(34,34,34,0.08)]`}>
+                <div className="w-[38px] h-[38px] border border-brand-blue text-brand-blue rounded-full flex items-center justify-center mb-5.5 transition-all duration-[450ms] group-hover:bg-brand-blue group-hover:text-white group-hover:scale-110 group-hover:shadow-[0_8px_24px_rgba(31,78,121,0.18)]">
+                  <Icon className="w-4 h-4" />
+                </div>
+                <h4 className="font-serif text-2xl text-charcoal mb-2">{title}</h4>
+                <p className="font-sans text-sm text-subtle leading-[1.55]">{desc}</p>
               </div>
-              <h4 className="font-serif text-2xl text-charcoal mb-2">Insured</h4>
-              <p className="font-sans text-sm text-subtle leading-[1.55]">$1M general liability + pet-care rider, COI for every venue.</p>
-            </div>
-            <div className="p-7 md:p-9 border-b md:border-b-0 md:border-r border-[rgba(34,34,34,0.08)]">
-              <div className="w-[38px] h-[38px] border border-brand-blue text-brand-blue rounded-full flex items-center justify-center mb-5.5">
-                <ShieldCheck className="w-4 h-4" />
-              </div>
-              <h4 className="font-serif text-2xl text-charcoal mb-2">Background-checked</h4>
-              <p className="font-sans text-sm text-subtle leading-[1.55]">AHCA Level 2 fingerprint screening for every childcare team member.</p>
-            </div>
-            <div className="p-7 md:p-9 border-b sm:border-b-0 sm:border-r border-[rgba(34,34,34,0.08)]">
-              <div className="w-[38px] h-[38px] border border-brand-blue text-brand-blue rounded-full flex items-center justify-center mb-5.5">
-                <Heart className="w-4 h-4" />
-              </div>
-              <h4 className="font-serif text-2xl text-charcoal mb-2">CPR-certified</h4>
-              <p className="font-sans text-sm text-subtle leading-[1.55]">Pediatric CPR &amp; First Aid for our childcare leads.</p>
-            </div>
-            <div className="p-7 md:p-9">
-              <div className="w-[38px] h-[38px] border border-brand-blue text-brand-blue rounded-full flex items-center justify-center mb-5.5">
-                <Users className="w-4 h-4" />
-              </div>
-              <h4 className="font-serif text-2xl text-charcoal mb-2">Wedding-trained</h4>
-              <p className="font-sans text-sm text-subtle leading-[1.55]">We work weddings — we run the kids' room, we coordinate with photographers, we don't improvise.</p>
-            </div>
+            ))}
           </Reveal>
         </div>
       </section>
@@ -133,9 +129,10 @@ export default function Home() {
           </Reveal>
           <Reveal className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 border-t border-l border-line-soft">
             {cities.map(([n, c]) => (
-              <div key={n} className="p-8 md:p-10 border-r border-b border-line-soft flex justify-between items-baseline transition-colors duration-[350ms] hover:bg-cream">
-                <span className="font-serif text-[30px]">{n}</span>
-                <span className="font-mono text-[11px] tracking-[0.18em] text-subtle">{c}</span>
+              <div key={n} className="group relative p-8 md:p-10 border-r border-b border-line-soft flex justify-between items-baseline transition-colors duration-[400ms] hover:bg-cream overflow-hidden">
+                <span className="gold-line bottom-0" />
+                <span className="font-serif text-[30px] transition-transform duration-[450ms] group-hover:translate-x-1">{n}</span>
+                <span className="font-mono text-[11px] tracking-[0.18em] text-subtle transition-colors duration-[350ms] group-hover:text-accent-gold">{c}</span>
               </div>
             ))}
           </Reveal>
@@ -151,9 +148,9 @@ export default function Home() {
           </Reveal>
           <Reveal className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 border-y border-line-soft">
             {venues.map((v, i) => (
-              <div key={i} className={`aspect-[5/3] border-b sm:border-b-0 border-r border-line-soft flex items-center justify-center relative text-subtle font-mono text-[10px] tracking-[0.22em] uppercase ${i === venues.length - 1 ? 'border-r-0 border-b-0' : ''}`}>
+              <div key={i} className={`group aspect-[5/3] border-b sm:border-b-0 border-r border-line-soft flex items-center justify-center relative text-subtle font-mono text-[10px] tracking-[0.22em] uppercase transition-colors duration-[450ms] hover:bg-cream/50 ${i === venues.length - 1 ? 'border-r-0 border-b-0' : ''}`}>
                 <span className="absolute top-3.5 right-3.5 text-[9px] tracking-[0.2em] text-subtle">Coming soon</span>
-                <span className="font-serif text-[22px] text-subtle tracking-normal normal-case italic">{v}</span>
+                <span className="font-serif text-[22px] text-subtle tracking-normal normal-case italic transition-all duration-[450ms] group-hover:text-charcoal group-hover:scale-105">{v}</span>
               </div>
             ))}
           </Reveal>
@@ -162,7 +159,8 @@ export default function Home() {
       </section>
 
       {/* CTA BAND */}
-      <Reveal className="bg-cream text-center py-[140px] px-8">
+      <Reveal className="relative bg-cream text-center py-[clamp(96px,14vw,140px)] px-5 sm:px-8 overflow-hidden">
+        <div aria-hidden className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-12 bg-accent-gold opacity-60" />
         <span className="font-mono text-[11px] tracking-[0.22em] text-subtle uppercase block mb-8">— Let's talk —</span>
         <h2 className="font-serif text-[clamp(32px,4.4vw,56px)] leading-[1.05] max-w-[18ch] mx-auto font-light text-charcoal mb-9">Let's give your littlest guests their <em className="italic text-brand-blue">best wedding day.</em></h2>
         <Button href="/contact" withArrow>Request a Quote</Button>

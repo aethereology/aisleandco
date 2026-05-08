@@ -23,26 +23,19 @@ export default function ForVendors() {
             <span>Four reasons, plainly</span>
           </Reveal>
           <Reveal className="grid grid-cols-1 sm:grid-cols-2 border-t border-l border-line-soft">
-            <div className="p-10 md:p-12 border-r border-b border-line-soft">
-              <div className="font-mono text-accent-gold text-[11px] tracking-[0.18em] mb-5.5">/01</div>
-              <h3 className="font-serif text-[26px] mb-3 max-w-[18ch] text-charcoal">Insured to your standard.</h3>
-              <p className="text-subtle text-[15px] leading-[1.65] max-w-[46ch]">$1M GL, pet rider, COI naming your venue as additional insured.</p>
-            </div>
-            <div className="p-10 md:p-12 border-r border-b border-line-soft">
-              <div className="font-mono text-accent-gold text-[11px] tracking-[0.18em] mb-5.5">/02</div>
-              <h3 className="font-serif text-[26px] mb-3 max-w-[18ch] text-charcoal">Single point of contact.</h3>
-              <p className="text-subtle text-[15px] leading-[1.65] max-w-[46ch]">One operator for kids and pets. No chasing multiple vendors the week of.</p>
-            </div>
-            <div className="p-10 md:p-12 border-r border-b border-line-soft">
-              <div className="font-mono text-accent-gold text-[11px] tracking-[0.18em] mb-5.5">/03</div>
-              <h3 className="font-serif text-[26px] mb-3 max-w-[18ch] text-charcoal">Coordinated with your timeline.</h3>
-              <p className="text-subtle text-[15px] leading-[1.65] max-w-[46ch]">Pre-event call, T-3 brief, on-site 60 minutes before guests arrive.</p>
-            </div>
-            <div className="p-10 md:p-12 border-r border-b border-line-soft">
-              <div className="font-mono text-accent-gold text-[11px] tracking-[0.18em] mb-5.5">/04</div>
-              <h3 className="font-serif text-[26px] mb-3 max-w-[18ch] text-charcoal">Branded for your couple.</h3>
-              <p className="text-subtle text-[15px] leading-[1.65] max-w-[46ch]">Optional co-branded "Family-Friendly Wedding" insert for your welcome packet.</p>
-            </div>
+            {[
+              ['/01', 'Insured to your standard.', '$1M GL, pet rider, COI naming your venue as additional insured.'],
+              ['/02', 'Single point of contact.', 'One operator for kids and pets. No chasing multiple vendors the week of.'],
+              ['/03', 'Coordinated with your timeline.', 'Pre-event call, T-3 brief, on-site 60 minutes before guests arrive.'],
+              ['/04', 'Branded for your couple.', 'Optional co-branded "Family-Friendly Wedding" insert for your welcome packet.']
+            ].map(([num, title, desc]) => (
+              <div key={num} className="group relative p-8 md:p-12 border-r border-b border-line-soft transition-colors duration-[400ms] hover:bg-cream/40 overflow-hidden">
+                <span className="gold-line top-0" />
+                <div className="font-mono text-accent-gold text-[11px] tracking-[0.18em] mb-5.5 transition-all duration-[450ms] group-hover:tracking-[0.24em]">{num}</div>
+                <h3 className="font-serif text-[26px] mb-3 max-w-[18ch] text-charcoal transition-colors duration-300 group-hover:text-brand-blue">{title}</h3>
+                <p className="font-sans text-subtle text-[15px] leading-[1.65] max-w-[46ch]">{desc}</p>
+              </div>
+            ))}
           </Reveal>
         </div>
       </section>
@@ -81,8 +74,9 @@ export default function ForVendors() {
           </Reveal>
           <Reveal className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 border-t border-l border-line-soft">
             {venues.map((v, i) => (
-              <div key={i} className="py-9 px-7 border-r border-b border-line-soft font-serif text-[24px] text-charcoal text-center flex items-center justify-center min-h-[120px] tracking-[0.01em]">
-                {v}
+              <div key={i} className="group relative py-9 px-7 border-r border-b border-line-soft font-serif text-[24px] text-charcoal text-center flex items-center justify-center min-h-[120px] tracking-[0.01em] transition-colors duration-[400ms] hover:bg-cream/50 overflow-hidden">
+                <span className="gold-line bottom-0" />
+                <span className="transition-transform duration-[450ms] group-hover:scale-105">{v}</span>
               </div>
             ))}
           </Reveal>

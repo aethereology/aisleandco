@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
@@ -9,11 +9,20 @@ import { Button } from '@/components/ui/Button';
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const progressRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 16);
+    const onScroll = () => {
+      setScrolled(window.scrollY > 16);
+      if (progressRef.current) {
+        const max = document.documentElement.scrollHeight - window.innerHeight;
+        const pct = max > 0 ? (window.scrollY / max) * 100 : 0;
+        progressRef.current.style.width = `${Math.min(pct, 100)}%`;
+      }
+    };
     window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
@@ -40,7 +49,7 @@ export function Nav() {
             {links.map((link) => {
               const active = pathname === link.href;
               return (
-                <Link key={link.href} href={link.href} className={`font-sans text-[13px] tracking-[0.06em] no-underline relative py-1.5 transition-opacity duration-[250ms] ${active ? 'opacity-100 after:content-[""] after:absolute after:left-1/2 after:-bottom-0.5 after:w-1 after:h-1 after:bg-accent-gold after:rounded-full after:-translate-x-1/2' : 'opacity-[0.82] hover:opacity-100'}`}>
+                <Link key={link.href} href={link.href} className={`font-sans text-[13px] tracking-[0.06em] no-underline relative py-1.5 transition-all duration-[250ms] after:content-[""] after:absolute after:left-0 after:right-0 after:-bottom-0.5 after:h-px after:bg-accent-gold after:origin-left after:transition-transform after:duration-[450ms] ${active ? 'opacity-100 after:scale-x-100' : 'opacity-[0.82] hover:opacity-100 after:scale-x-0 hover:after:scale-x-100'}`}>
                   {link.label}
                 </Link>
               );
@@ -50,11 +59,12 @@ export function Nav() {
             <div className="hidden lg:block">
               <Button href="/contact" withArrow>Request a Quote</Button>
             </div>
-            <button className="lg:hidden w-10 h-10 flex items-center justify-center border border-line rounded-full" aria-label="Open menu" onClick={() => setMobileOpen(true)}>
+            <button className="lg:hidden w-10 h-10 flex items-center justify-center border border-line rounded-full transition-colors hover:bg-cream" aria-label="Open menu" onClick={() => setMobileOpen(true)}>
               <Menu className="w-4 h-4" strokeWidth={1.6} />
             </button>
           </div>
         </div>
+        <div ref={progressRef} className="scroll-progress" aria-hidden="true" />
       </header>
 
       {/* Mobile Nav Overlay */}

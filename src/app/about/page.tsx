@@ -29,12 +29,15 @@ export default function About() {
             <div>
               <h2 className="font-serif text-[clamp(32px,4.4vw,56px)] leading-[1.05] mb-8 font-light text-charcoal">A wedding planner who used to be a <em className="italic text-brand-blue">hospital nurse.</em></h2>
               <div className="text-[17px] leading-[1.75] text-charcoal space-y-[18px]">
-                <p>Aisle &amp; Co. began at the back of a coastal venue, in October, with a six-year-old in a flower crown asking when she could go back to the dance floor. The bride was on the patio. The planner was on a radio. Nobody on payroll was actually <em>watching</em> the kids.</p>
+                <p className="dropcap">Aisle &amp; Co. began at the back of a coastal venue, in October, with a six-year-old in a flower crown asking when she could go back to the dance floor. The bride was on the patio. The planner was on a radio. Nobody on payroll was actually <em>watching</em> the kids.</p>
                 <p>The founder, Kyle, had spent a decade between pediatric care, in-home pet sitting, and large-format events. He'd seen the gap from every side. Northeast Florida — with its destination weddings, coastal venues, and 18-month booking calendars — had no dedicated, insured, wedding-day-specific care option. Plenty of babysitters. Plenty of dog walkers. Nobody who knew that the photographer needs the dog at 4:42, not 5:00.</p>
-                <p>So he built the team he wished he'd had on the radio that night. Background-checked. CPR-certified. Trained on a manual that exists. Insured to the standard a Ritz coordinator will actually accept.</p>
-                <p>That's the whole story. We hope to be a small footnote in yours.</p>
+                <p className="pull-quote my-10">So he built the team he wished he'd had on the radio that night. Background-checked. CPR-certified. Trained on a manual that exists.</p>
+                <p>Insured to the standard a Ritz coordinator will actually accept. That's the whole story. We hope to be a small footnote in yours.</p>
               </div>
-              <div className="mt-8 font-serif italic text-2xl text-brand-blue">— Kyle, Founder</div>
+              <div className="mt-10 flex items-center gap-4">
+                <span className="w-10 h-px bg-accent-gold" />
+                <span className="font-serif italic text-xl text-brand-blue">Kyle, Founder</span>
+              </div>
             </div>
           </Reveal>
         </div>
@@ -51,21 +54,18 @@ export default function About() {
             <p className="text-subtle text-base leading-[1.6] max-w-[48ch]">Three things we won't compromise on, written plainly.</p>
           </Reveal>
           <Reveal className="grid grid-cols-1 md:grid-cols-3 gap-9 md:gap-12">
-            <div>
-              <div className="font-serif italic text-accent-gold text-[42px] leading-none mb-6">i.</div>
-              <h3 className="font-serif text-[26px] mb-3.5 leading-[1.2] max-w-[18ch] text-charcoal">Care is a credential, not a vibe.</h3>
-              <p className="text-subtle text-[15px] leading-[1.7]">We screen, train, and certify every team member. Background checks, pediatric CPR, and our Aisle &amp; Co. Sitter Manual are non-negotiable.</p>
-            </div>
-            <div>
-              <div className="font-serif italic text-accent-gold text-[42px] leading-none mb-6">ii.</div>
-              <h3 className="font-serif text-[26px] mb-3.5 leading-[1.2] max-w-[18ch] text-charcoal">The kids' room is part of the wedding.</h3>
-              <p className="text-subtle text-[15px] leading-[1.7]">Not an afterthought. We coordinate with the planner, the photographer, and the catering team so that nothing breaks the flow of the day.</p>
-            </div>
-            <div>
-              <div className="font-serif italic text-accent-gold text-[42px] leading-none mb-6">iii.</div>
-              <h3 className="font-serif text-[26px] mb-3.5 leading-[1.2] max-w-[18ch] text-charcoal">Pets are family — and they need a pro.</h3>
-              <p className="text-subtle text-[15px] leading-[1.7]">A wedding is overstimulating for any animal. Our handlers know when to push them onto the dance floor for the photo and when to take them home.</p>
-            </div>
+            {[
+              ['i.', 'Care is a credential, not a vibe.', 'We screen, train, and certify every team member. Background checks, pediatric CPR, and our Aisle & Co. Sitter Manual are non-negotiable.'],
+              ['ii.', "The kids' room is part of the wedding.", 'Not an afterthought. We coordinate with the planner, the photographer, and the catering team so that nothing breaks the flow of the day.'],
+              ['iii.', 'Pets are family — and they need a pro.', 'A wedding is overstimulating for any animal. Our handlers know when to push them onto the dance floor for the photo and when to take them home.']
+            ].map(([num, title, desc], i) => (
+              <div key={i} className="group relative pt-2">
+                <span className="absolute top-0 left-0 w-8 h-px bg-accent-gold transition-all duration-[500ms] group-hover:w-16" />
+                <div className="font-serif italic text-accent-gold text-[42px] leading-none mb-6 mt-6 transition-transform duration-[450ms] group-hover:translate-x-1">{num}</div>
+                <h3 className="font-serif text-[26px] mb-3.5 leading-[1.2] max-w-[18ch] text-charcoal">{title}</h3>
+                <p className="font-sans text-subtle text-[15px] leading-[1.7]">{desc}</p>
+              </div>
+            ))}
           </Reveal>
         </div>
       </section>
