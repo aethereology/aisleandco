@@ -22,7 +22,7 @@ export default function Contact() {
           <Reveal className="font-mono text-[11px] tracking-[0.22em] text-subtle uppercase">N° 005 — Contact</Reveal>
           <Reveal className="mt-6 grid grid-cols-1 md:grid-cols-[1.3fr_1fr] gap-6 md:gap-16 items-end">
             <h1 className="font-serif text-[clamp(40px,6.2vw,84px)] leading-[1.02] max-w-[14ch] font-light text-charcoal">Tell us about your <em className="italic text-accent-gold">wedding day.</em></h1>
-            <p className="font-serif text-[clamp(20px,2.2vw,26px)] leading-[1.45] text-[#3a3a3a] font-light max-w-[46ch]">We respond to every inquiry within 24 hours — direct human responses, not chatbots.</p>
+            <p className="font-serif text-[clamp(20px,2.2vw,26px)] leading-[1.45] text-body font-light max-w-[46ch]">We respond to every inquiry within 24 hours — direct human responses, not chatbots.</p>
           </Reveal>
         </div>
       </section>
@@ -56,7 +56,7 @@ export default function Contact() {
                           <span className={`w-[18px] h-[18px] rounded-[5px] border-[1.5px] inline-flex items-center justify-center shrink-0 transition-all duration-[250ms] ${checked ? 'bg-brand-blue border-brand-blue' : 'bg-white border-line'}`}>
                             <svg className={`w-2.5 h-2.5 transition-all duration-[250ms] text-white ${checked ? 'opacity-100 scale-100' : 'opacity-0 scale-[0.6]'}`} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><polyline points="5 12 10 17 19 8"/></svg>
                           </span>
-                          <span className="flex-1 leading-[1.3] text-[#3a3a3a]">{s}</span>
+                          <span className="flex-1 leading-[1.3] text-body">{s}</span>
                         </label>
                       );
                     })}
@@ -78,12 +78,12 @@ export default function Contact() {
               <div className="h-px bg-line-soft w-full"></div>
               <div>
                 <h4 className="font-sans text-[11px] tracking-[0.2em] uppercase text-subtle font-medium mb-2">Response time</h4>
-                <p className="text-sm text-[#3a3a3a] leading-[1.6]">Within 24 hours, often sooner. We're a small team — direct human responses, not chatbots.</p>
+                <p className="text-sm text-body leading-[1.6]">Within 24 hours, often sooner. We're a small team — direct human responses, not chatbots.</p>
               </div>
               <div className="h-px bg-line-soft w-full"></div>
               <div>
                 <h4 className="font-sans text-[11px] tracking-[0.2em] uppercase text-subtle font-medium mb-2">Service area</h4>
-                <ul className="list-none p-0 m-0 grid gap-1.5 text-sm text-[#3a3a3a]">
+                <ul className="list-none p-0 m-0 grid gap-1.5 text-sm text-body">
                   <li>Jacksonville</li>
                   <li>St. Augustine</li>
                   <li>Ponte Vedra</li>
@@ -95,7 +95,7 @@ export default function Contact() {
               <div className="h-px bg-line-soft w-full"></div>
               <div>
                 <h4 className="font-sans text-[11px] tracking-[0.2em] uppercase text-subtle font-medium mb-2">For venues &amp; planners</h4>
-                <p className="text-sm text-[#3a3a3a] leading-[1.6]">Looking for a vendor packet or to be added to our preferred-partner roster? <Link href="/for-vendors" className="text-brand-blue underline hover:text-accent-gold transition-colors">Visit the partners page →</Link></p>
+                <p className="text-sm text-body leading-[1.6]">Looking for a vendor packet or to be added to our preferred-partner roster? <Link href="/for-vendors" className="text-brand-blue underline hover:text-accent-gold transition-colors">Visit the partners page →</Link></p>
               </div>
             </Reveal>
           </div>

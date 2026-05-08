@@ -11,7 +11,7 @@ export default function ForVendors() {
           <Reveal className="font-mono text-[11px] tracking-[0.22em] text-subtle uppercase">N° 004 — For Venues & Planners</Reveal>
           <Reveal className="mt-6 grid grid-cols-1 md:grid-cols-[1.3fr_1fr] gap-6 md:gap-16 items-end">
             <h1 className="font-serif text-[clamp(40px,6.2vw,84px)] leading-[1.02] max-w-[18ch] font-light text-charcoal">Make your couples' day easier. <em className="italic text-accent-gold">Get on the right side of the kids' room conversation.</em></h1>
-            <p className="font-serif text-[clamp(20px,2.2vw,26px)] leading-[1.45] text-[#3a3a3a] font-light max-w-[46ch]">Aisle & Co. is the wedding-day care partner for premium venues and planners across Northeast Florida.</p>
+            <p className="font-serif text-[clamp(20px,2.2vw,26px)] leading-[1.45] text-body font-light max-w-[46ch]">Aisle & Co. is the wedding-day care partner for premium venues and planners across Northeast Florida.</p>
           </Reveal>
         </div>
       </section>

@@ -19,7 +19,7 @@ export default function Services() {
           <Reveal className="font-mono text-[11px] tracking-[0.22em] text-subtle uppercase">N° 002 — Services</Reveal>
           <Reveal className="mt-6 grid grid-cols-1 md:grid-cols-[1.2fr_1fr] gap-6 md:gap-16 items-end">
             <h1 className="font-serif text-[clamp(40px,6.2vw,84px)] leading-[1.02] max-w-[14ch] font-light text-charcoal m-0">Three services. <em className="italic text-accent-gold">One team.</em></h1>
-            <p className="font-serif text-[clamp(20px,2.2vw,26px)] leading-[1.45] text-[#3a3a3a] font-light max-w-[48ch]">Built deliberately for the rhythm of a wedding day — drop-off through last dance, pickup through pillow.</p>
+            <p className="font-serif text-[clamp(20px,2.2vw,26px)] leading-[1.45] text-body font-light max-w-[48ch]">Built deliberately for the rhythm of a wedding day — drop-off through last dance, pickup through pillow.</p>
           </Reveal>
         </div>
       </section>
@@ -32,7 +32,7 @@ export default function Services() {
             <div className="order-first md:order-last">
               <div className="flex items-center gap-3.5 text-accent-gold font-serif italic text-lg mb-4 before:content-[''] before:w-9 before:h-px before:bg-accent-gold">Service One</div>
               <h2 className="font-serif text-[clamp(32px,4.4vw,56px)] leading-[1.05] text-charcoal mb-6 font-light">Aisle Sitters.</h2>
-              <p className="text-[#3a3a3a] text-[17px] leading-[1.7] mb-9 max-w-[54ch]">A dedicated kids' room (or zone) at the venue, staffed by Aisle &amp; Co. sitters from cocktail hour through reception end. Parents drop off, sitters take over, parents enjoy the reception.</p>
+              <p className="text-body text-[17px] leading-[1.7] mb-9 max-w-[54ch]">A dedicated kids' room (or zone) at the venue, staffed by Aisle &amp; Co. sitters from cocktail hour through reception end. Parents drop off, sitters take over, parents enjoy the reception.</p>
               
               <h4 className="text-[13px] tracking-[0.18em] uppercase text-brand-blue font-sans font-semibold mb-[18px]">What's included</h4>
               <ul className="list-none p-0 m-0 mb-9 grid gap-3.5">
@@ -43,7 +43,7 @@ export default function Services() {
                   "Parent text check-ins every 60–90 minutes",
                   "Coordination with catering for kids' meals"
                 ].map((item, i) => (
-                  <li key={i} className="flex gap-3.5 text-[15px] text-[#3a3a3a] leading-[1.55] before:content-[''] before:w-1.5 before:h-1.5 before:bg-accent-gold before:rounded-full before:mt-[9px] before:shrink-0">{item}</li>
+                  <li key={i} className="flex gap-3.5 text-[15px] text-body leading-[1.55] before:content-[''] before:w-1.5 before:h-1.5 before:bg-accent-gold before:rounded-full before:mt-[9px] before:shrink-0">{item}</li>
                 ))}
               </ul>
 
@@ -76,7 +76,7 @@ export default function Services() {
             <div>
               <div className="flex items-center gap-3.5 text-accent-gold font-serif italic text-lg mb-4 before:content-[''] before:w-9 before:h-px before:bg-accent-gold">Service Two</div>
               <h2 className="font-serif text-[clamp(32px,4.4vw,56px)] leading-[1.05] text-charcoal mb-6 font-light">Pet of Honor.</h2>
-              <p className="text-[#3a3a3a] text-[17px] leading-[1.7] mb-9 max-w-[54ch]">A dedicated, insured handler picks up your pet, brings them for ceremony and photos, and returns them home before the reception starts. Hands-free, stress-free.</p>
+              <p className="text-body text-[17px] leading-[1.7] mb-9 max-w-[54ch]">A dedicated, insured handler picks up your pet, brings them for ceremony and photos, and returns them home before the reception starts. Hands-free, stress-free.</p>
               
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 mb-9">
                 <div className="p-6 bg-white border border-line-soft rounded-[18px] transition-all duration-[350ms] hover:shadow-md hover:-translate-y-[2px]">
@@ -106,7 +106,7 @@ export default function Services() {
             <div className="order-first md:order-last">
               <div className="flex items-center gap-3.5 text-accent-gold font-serif italic text-lg mb-4 before:content-[''] before:w-9 before:h-px before:bg-accent-gold">Service Three</div>
               <h2 className="font-serif text-[clamp(32px,4.4vw,56px)] leading-[1.05] text-charcoal mb-6 font-light">Wedding Weekend Care.</h2>
-              <p className="text-[#3a3a3a] text-[17px] leading-[1.7] mb-9 max-w-[54ch]">For destination couples whose families fly in Thursday and stay through Sunday brunch. One contract, one team, one point of contact.</p>
+              <p className="text-body text-[17px] leading-[1.7] mb-9 max-w-[54ch]">For destination couples whose families fly in Thursday and stay through Sunday brunch. One contract, one team, one point of contact.</p>
               
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 mb-9">
                 <div className="p-6 bg-white border border-line-soft rounded-[18px] transition-all duration-[350ms] hover:shadow-md hover:-translate-y-[2px]">

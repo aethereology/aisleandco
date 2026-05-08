@@ -14,7 +14,7 @@ export default function About() {
         <Reveal className="max-w-[980px] mx-auto px-5 sm:px-8">
           <span className="font-mono text-[11px] tracking-[0.22em] text-subtle uppercase">N° 003 — About</span>
           <h1 className="mt-6 font-serif text-[clamp(40px,6.2vw,84px)] leading-[1.02] font-light text-charcoal">Built for the day <em className="italic text-accent-gold">that matters most.</em></h1>
-          <p className="font-serif font-light text-[clamp(20px,2.2vw,26px)] leading-[1.45] text-[#3a3a3a] mt-7 mx-auto max-w-[54ch]">Aisle &amp; Co. exists because everyone at a wedding deserves to actually enjoy it — including the smallest guests.</p>
+          <p className="font-serif font-light text-[clamp(20px,2.2vw,26px)] leading-[1.45] text-body mt-7 mx-auto max-w-[54ch]">Aisle &amp; Co. exists because everyone at a wedding deserves to actually enjoy it — including the smallest guests.</p>
         </Reveal>
       </section>
 
@@ -28,7 +28,7 @@ export default function About() {
             <Placeholder text="Placeholder · Founder portrait" className="aspect-[4/5] rounded-md w-full" />
             <div>
               <h2 className="font-serif text-[clamp(32px,4.4vw,56px)] leading-[1.05] mb-8 font-light text-charcoal">A wedding planner who used to be a <em className="italic text-brand-blue">hospital nurse.</em></h2>
-              <div className="text-[17px] leading-[1.75] text-[#333] space-y-[18px]">
+              <div className="text-[17px] leading-[1.75] text-charcoal space-y-[18px]">
                 <p>Aisle &amp; Co. began at the back of a coastal venue, in October, with a six-year-old in a flower crown asking when she could go back to the dance floor. The bride was on the patio. The planner was on a radio. Nobody on payroll was actually <em>watching</em> the kids.</p>
                 <p>The founder, Kyle, had spent a decade between pediatric care, in-home pet sitting, and large-format events. He'd seen the gap from every side. Northeast Florida — with its destination weddings, coastal venues, and 18-month booking calendars — had no dedicated, insured, wedding-day-specific care option. Plenty of babysitters. Plenty of dog walkers. Nobody who knew that the photographer needs the dog at 4:42, not 5:00.</p>
                 <p>So he built the team he wished he'd had on the radio that night. Background-checked. CPR-certified. Trained on a manual that exists. Insured to the standard a Ritz coordinator will actually accept.</p>

@@ -153,7 +153,7 @@ export default function Home() {
             {venues.map((v, i) => (
               <div key={i} className={`aspect-[5/3] border-b sm:border-b-0 border-r border-line-soft flex items-center justify-center relative text-subtle font-mono text-[10px] tracking-[0.22em] uppercase ${i === venues.length - 1 ? 'border-r-0 border-b-0' : ''}`}>
                 <span className="absolute top-3.5 right-3.5 text-[9px] tracking-[0.2em] text-subtle">Coming soon</span>
-                <span className="font-serif text-[22px] text-[#bbb] tracking-normal normal-case italic">{v}</span>
+                <span className="font-serif text-[22px] text-subtle tracking-normal normal-case italic">{v}</span>
               </div>
             ))}
           </Reveal>
