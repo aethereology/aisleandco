@@ -40,7 +40,7 @@ export function Nav() {
             {links.map((link) => {
               const active = pathname === link.href;
               return (
-                <Link key={link.href} href={link.href} className={`text-[13px] tracking-[0.06em] no-underline relative py-1.5 transition-opacity duration-[250ms] ${active ? 'opacity-100 after:content-[""] after:absolute after:left-1/2 after:-bottom-0.5 after:w-1 after:h-1 after:bg-accent-gold after:rounded-full after:-translate-x-1/2' : 'opacity-[0.82] hover:opacity-100'}`}>
+                <Link key={link.href} href={link.href} className={`font-sans text-[13px] tracking-[0.06em] no-underline relative py-1.5 transition-opacity duration-[250ms] ${active ? 'opacity-100 after:content-[""] after:absolute after:left-1/2 after:-bottom-0.5 after:w-1 after:h-1 after:bg-accent-gold after:rounded-full after:-translate-x-1/2' : 'opacity-[0.82] hover:opacity-100'}`}>
                   {link.label}
                 </Link>
               );

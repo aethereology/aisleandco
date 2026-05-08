@@ -18,7 +18,7 @@ const inter = Inter({
 });
 
 const jetbrainsMono = JetBrains_Mono({
-  variable: "--font-mono",
+  variable: "--font-jetbrains",
   subsets: ["latin"],
 });
 
@@ -34,7 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${cormorant.variable} ${inter.variable} ${jetbrainsMono.variable} antialiased min-h-screen flex flex-col font-sans`}>
+      <body className={`${cormorant.variable} ${inter.variable} ${jetbrainsMono.variable} antialiased min-h-screen flex flex-col font-serif`}>
         <Nav />
         <main className="flex-1">{children}</main>
         <Footer />

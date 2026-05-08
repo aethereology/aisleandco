@@ -10,7 +10,14 @@
       "Bash(vercel project *)",
       "Bash(vercel env *)",
       "Bash(vercel build *)",
-      "Bash(vercel pull *)"
+      "Bash(vercel pull *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(vercel --prod)",
+      "Bash(git reset *)",
+      "Bash(ffmpeg -version)",
+      "Bash(where ffmpeg *)",
+      "Bash(Get-Command ffmpeg *)"
     ]
   }
 }

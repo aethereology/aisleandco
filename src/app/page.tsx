@@ -55,25 +55,25 @@ export default function Home() {
           </Reveal>
           <Reveal className="mb-[72px] grid grid-cols-1 md:grid-cols-[1fr_1.4fr] gap-[18px] md:gap-12 items-end">
             <h2 className="font-serif text-[clamp(32px,4.4vw,56px)] leading-[1.05] max-w-[18ch] font-light text-charcoal">The wedding day, <em className="italic text-accent-gold">looked after.</em></h2>
-            <p className="text-subtle text-base leading-[1.6] max-w-[48ch]">A small, deliberate menu of services for couples who hired us because they don't want to think about it. One team. One contract. One person on the radio.</p>
+            <p className="font-sans text-subtle text-base leading-[1.6] max-w-[48ch]">A small, deliberate menu of services for couples who hired us because they don't want to think about it. One team. One contract. One person on the radio.</p>
           </Reveal>
           <Reveal className="grid grid-cols-1 md:grid-cols-3 gap-0 border-y border-line-soft">
             <div className="p-9 md:p-12 border-b md:border-b-0 md:border-r border-line-soft transition-colors duration-[400ms] hover:bg-white">
               <div className="font-serif italic text-accent-gold text-lg mb-8 flex justify-between items-center"><span>I</span><span>—</span></div>
               <h3 className="font-serif text-[clamp(22px,2.4vw,30px)] leading-[1.15] mb-3.5 text-charcoal">Aisle Sitters</h3>
-              <p className="text-subtle text-[15px] leading-[1.65] mb-7">On-site, dedicated kids-room childcare during your ceremony and reception. Drop them off; we handle the rest.</p>
+              <p className="font-sans text-subtle text-[15px] leading-[1.65] mb-7">On-site, dedicated kids-room childcare during your ceremony and reception. Drop them off; we handle the rest.</p>
               <Link href="/services" className="text-xs tracking-[0.18em] uppercase text-charcoal border-b border-charcoal pb-1 inline-block transition-all duration-300 hover:text-accent-gold hover:border-accent-gold no-underline">Learn more →</Link>
             </div>
             <div className="p-9 md:p-12 border-b md:border-b-0 md:border-r border-line-soft transition-colors duration-[400ms] hover:bg-white">
               <div className="font-serif italic text-accent-gold text-lg mb-8 flex justify-between items-center"><span>II</span><span>—</span></div>
               <h3 className="font-serif text-[clamp(22px,2.4vw,30px)] leading-[1.15] mb-3.5 text-charcoal">Pet of Honor</h3>
-              <p className="text-subtle text-[15px] leading-[1.65] mb-7">A handler who picks up your pet, brings them for ceremony and photos, and gets them home safely.</p>
+              <p className="font-sans text-subtle text-[15px] leading-[1.65] mb-7">A handler who picks up your pet, brings them for ceremony and photos, and gets them home safely.</p>
               <Link href="/services" className="text-xs tracking-[0.18em] uppercase text-charcoal border-b border-charcoal pb-1 inline-block transition-all duration-300 hover:text-accent-gold hover:border-accent-gold no-underline">Learn more →</Link>
             </div>
             <div className="p-9 md:p-12 transition-colors duration-[400ms] hover:bg-white">
               <div className="font-serif italic text-accent-gold text-lg mb-8 flex justify-between items-center"><span>III</span><span>—</span></div>
               <h3 className="font-serif text-[clamp(22px,2.4vw,30px)] leading-[1.15] mb-3.5 text-charcoal">Wedding Weekend Care</h3>
-              <p className="text-subtle text-[15px] leading-[1.65] mb-7">One contract, one team — rehearsal dinner sitting through Sunday brunch.</p>
+              <p className="font-sans text-subtle text-[15px] leading-[1.65] mb-7">One contract, one team — rehearsal dinner sitting through Sunday brunch.</p>
               <Link href="/services" className="text-xs tracking-[0.18em] uppercase text-charcoal border-b border-charcoal pb-1 inline-block transition-all duration-300 hover:text-accent-gold hover:border-accent-gold no-underline">Learn more →</Link>
             </div>
           </Reveal>
@@ -93,28 +93,28 @@ export default function Home() {
                 <Shield className="w-4 h-4" />
               </div>
               <h4 className="font-serif text-2xl text-charcoal mb-2">Insured</h4>
-              <p className="text-sm text-subtle leading-[1.55]">$1M general liability + pet-care rider, COI for every venue.</p>
+              <p className="font-sans text-sm text-subtle leading-[1.55]">$1M general liability + pet-care rider, COI for every venue.</p>
             </div>
             <div className="p-7 md:p-9 border-b md:border-b-0 md:border-r border-[rgba(34,34,34,0.08)]">
               <div className="w-[38px] h-[38px] border border-brand-blue text-brand-blue rounded-full flex items-center justify-center mb-5.5">
                 <ShieldCheck className="w-4 h-4" />
               </div>
               <h4 className="font-serif text-2xl text-charcoal mb-2">Background-checked</h4>
-              <p className="text-sm text-subtle leading-[1.55]">AHCA Level 2 fingerprint screening for every childcare team member.</p>
+              <p className="font-sans text-sm text-subtle leading-[1.55]">AHCA Level 2 fingerprint screening for every childcare team member.</p>
             </div>
             <div className="p-7 md:p-9 border-b sm:border-b-0 sm:border-r border-[rgba(34,34,34,0.08)]">
               <div className="w-[38px] h-[38px] border border-brand-blue text-brand-blue rounded-full flex items-center justify-center mb-5.5">
                 <Heart className="w-4 h-4" />
               </div>
               <h4 className="font-serif text-2xl text-charcoal mb-2">CPR-certified</h4>
-              <p className="text-sm text-subtle leading-[1.55]">Pediatric CPR &amp; First Aid for our childcare leads.</p>
+              <p className="font-sans text-sm text-subtle leading-[1.55]">Pediatric CPR &amp; First Aid for our childcare leads.</p>
             </div>
             <div className="p-7 md:p-9">
               <div className="w-[38px] h-[38px] border border-brand-blue text-brand-blue rounded-full flex items-center justify-center mb-5.5">
                 <Users className="w-4 h-4" />
               </div>
               <h4 className="font-serif text-2xl text-charcoal mb-2">Wedding-trained</h4>
-              <p className="text-sm text-subtle leading-[1.55]">We work weddings — we run the kids' room, we coordinate with photographers, we don't improvise.</p>
+              <p className="font-sans text-sm text-subtle leading-[1.55]">We work weddings — we run the kids' room, we coordinate with photographers, we don't improvise.</p>
             </div>
           </Reveal>
         </div>
@@ -129,7 +129,7 @@ export default function Home() {
           </Reveal>
           <Reveal className="mb-[72px] grid grid-cols-1 md:grid-cols-[1fr_1.4fr] gap-[18px] md:gap-12 items-end">
             <h2 className="font-serif text-[clamp(32px,4.4vw,56px)] leading-[1.05] max-w-[18ch] font-light text-charcoal">From <em className="italic text-accent-gold">St. Augustine</em> to <em className="italic text-accent-gold">Amelia Island.</em></h2>
-            <p className="text-subtle text-base leading-[1.6] max-w-[48ch]">Premium venues across the Northeast Florida corridor. Travel beyond 25 miles is billed simply at $1.50/mile.</p>
+            <p className="font-sans text-subtle text-base leading-[1.6] max-w-[48ch]">Premium venues across the Northeast Florida corridor. Travel beyond 25 miles is billed simply at $1.50/mile.</p>
           </Reveal>
           <Reveal className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 border-t border-l border-line-soft">
             {cities.map(([n, c]) => (
@@ -157,7 +157,7 @@ export default function Home() {
               </div>
             ))}
           </Reveal>
-          <p className="text-center mt-6 text-subtle text-[13px]">We are actively building our preferred-vendor relationships across Northeast Florida.</p>
+          <p className="font-sans text-center mt-6 text-subtle text-[13px]">We are actively building our preferred-vendor relationships across Northeast Florida.</p>
         </div>
       </section>
 
