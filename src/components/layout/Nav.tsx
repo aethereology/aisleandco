@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
+import { Logo } from '@/components/ui/Logo';
 
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);
@@ -42,9 +43,7 @@ export function Nav() {
     <>
       <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-[450ms] ease border-b border-transparent ${scrolled ? 'bg-[rgba(251,248,242,0.78)] backdrop-blur-[14px] backdrop-saturate-[140%] border-line-soft py-[14px]' : 'py-[22px]'}`}>
         <div className="max-w-[1240px] mx-auto px-5 sm:px-8 flex items-center justify-between gap-8">
-          <Link href="/" className="font-serif text-[26px] tracking-[0.02em] font-medium inline-flex items-center gap-2.5 no-underline text-inherit">
-            <span>Aisle</span><span className="italic text-accent-gold font-normal">&amp;</span><span>Co.</span>
-          </Link>
+          <Logo size="md" variant="dark" />
           <nav className="hidden lg:flex gap-9">
             {links.map((link) => {
               const active = pathname === link.href;
@@ -70,9 +69,7 @@ export function Nav() {
       {/* Mobile Nav Overlay */}
       <div className={`fixed inset-0 bg-paper z-[60] flex flex-col py-7 px-5 sm:px-8 transition-opacity duration-[350ms] ease ${mobileOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
         <div className="flex justify-between items-center">
-          <Link href="/" className="font-serif text-[26px] tracking-[0.02em] font-medium inline-flex items-center gap-2.5 no-underline text-inherit" onClick={() => setMobileOpen(false)}>
-            <span>Aisle</span><span className="italic text-accent-gold font-normal">&amp;</span><span>Co.</span>
-          </Link>
+          <Logo size="md" variant="dark" onClick={() => setMobileOpen(false)} />
           <button className="w-10 h-10 flex items-center justify-center border border-line rounded-full" aria-label="Close menu" onClick={() => setMobileOpen(false)}>
             <X className="w-3.5 h-3.5" strokeWidth={1.6} />
           </button>
