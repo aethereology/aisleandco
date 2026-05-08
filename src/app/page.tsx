@@ -1,10 +1,7 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/Button';
-import { Placeholder } from '@/components/ui/Placeholder';
 import { Reveal } from '@/components/ui/Reveal';
 import { Shield, ShieldCheck, Heart, Users } from 'lucide-react';
-
-import { HeroVideo } from '@/components/ui/HeroVideo';
 
 export default function Home() {
   const cities = [
@@ -22,10 +19,15 @@ export default function Home() {
     <div className="animate-[fade_0.55s_cubic-bezier(0.2,0.7,0.2,1)_both]">
       <section className="relative min-h-screen text-white overflow-hidden flex items-end pt-[200px] pb-24 md:pt-[160px]">
         <div className="absolute inset-0 z-0">
-          <HeroVideo 
-            src="/White Minimalist Happy Wedding Video.mp4" 
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
             className="w-full h-full object-cover"
-          />
+          >
+            <source src="/aisleandcobg1.mp4" type="video/mp4" />
+          </video>
           <div className="absolute inset-0 bg-gradient-to-b from-[rgba(22,57,88,0.35)] via-[rgba(22,57,88,0.55)] to-[rgba(15,30,46,0.85)]" />
         </div>
         <div className="absolute top-[104px] md:top-[84px] left-1/2 -translate-x-1/2 w-full max-w-[1240px] px-8 flex justify-between text-[11px] md:text-[10px] tracking-[0.22em] uppercase text-[rgba(255,255,255,0.78)] z-10">

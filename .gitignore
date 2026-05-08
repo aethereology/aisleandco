@@ -41,3 +41,8 @@ yarn-error.log*
 next-env.d.ts
 
 .vercel
+
+# large media files (deploy via Vercel CLI, not GitHub)
+public/*.mp4
+public/*.mov
+public/*.webm
