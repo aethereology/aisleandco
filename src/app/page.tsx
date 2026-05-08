@@ -26,7 +26,7 @@ export default function Home() {
             playsInline
             className="w-full h-full object-cover"
           >
-            <source src="/aisleandcobg1.mp4" type="video/mp4" />
+            <source src="/wedding-bg.mp4" type="video/mp4" />
           </video>
           <div className="absolute inset-0 bg-gradient-to-b from-[rgba(22,57,88,0.35)] via-[rgba(22,57,88,0.55)] to-[rgba(15,30,46,0.85)]" />
         </div>
