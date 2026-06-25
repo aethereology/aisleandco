@@ -40,16 +40,18 @@ export default function About() {
               />
             </div>
             <div>
-              <h2 className="font-serif text-[clamp(32px,4.4vw,56px)] leading-[1.05] mb-8 font-light text-charcoal">A bridal artist who saw the gap <em className="italic text-brand-blue">from the chair.</em></h2>
+              <h2 className="font-serif text-[clamp(32px,4.4vw,56px)] leading-[1.05] mb-8 font-light text-charcoal">A bridal expert who saw <em className="italic text-brand-blue">the gap.</em></h2>
               <div className="text-[17px] leading-[1.75] text-charcoal space-y-[18px]">
-                <p className="dropcap">Aisle &amp; Co. began at the back of a coastal venue, in October, with a six-year-old in a flower crown asking when she could go back to the dance floor. The bride was on the patio. The planner was on a radio. Nobody on payroll was actually <em>watching</em> the kids.</p>
-                <p>The founder, Maureen Ella, had spent years as a bridal beauty artist — in the room every wedding morning, at venues across St. Augustine, Jacksonville, Palm Coast, and beyond. She saw the same gap from the chair, over and over: the bride glowing, the planner on a radio, and nobody actually watching the kids — or the dog. Northeast Florida — with its destination weddings, coastal venues, and 18-month booking calendars — had no dedicated, insured, wedding-day-specific care option. Plenty of babysitters. Plenty of dog walkers. Nobody who knew that the photographer needs the dog at 4:42, not 5:00.</p>
-                <p className="pull-quote my-10">So she built the team she wished every wedding morning had. Background-checked. CPR-certified. Trained on a manual that exists.</p>
-                <p>Insured to the standard a Ritz coordinator will actually accept. That's the whole story. We hope to be a small footnote in yours.</p>
+                <p className="dropcap">Aisle and Co. began as founder, Maureen Ella, spent years as a bridal beauty artist, present for the quiet moments, the happy tears, and wedding mornings across St. Augustine, Jacksonville, Amelia Island, and beyond.</p>
+                <p>From behind the chair, she noticed the same gap again and again: the bride was surrounded by her glam team, the planner was orchestrating every detail, but no one was truly responsible for the children or the fur family.</p>
+                <p>In Northeast Florida, where destination weddings, coastal venues, and 18-month booking calendars are the norm, there were plenty of babysitters and dog walkers. But there was no dedicated team that understood the rhythm of a wedding day. No one who understood that wedding-day care is not just babysitting; it means knowing the little guest needs to start getting dressed at 4:00 p.m. to be perfectly ready when the photographer arrives at 5:00.</p>
+                <p className="pull-quote my-10">So Maureen built the team she wished every wedding morning had.</p>
+                <p>Background-checked. CPR-certified. Wedding-trained. Calm under pressure. Ready for the unexpected.</p>
+                <p>Because while we will never be the reason you remember your wedding day, we hope to be one of the reasons it felt effortless. We hope to be a small footnote in your love story.</p>
               </div>
               <div className="mt-10 flex items-center gap-4">
                 <span className="w-10 h-px bg-accent-gold" />
-                <span className="font-serif italic text-xl text-brand-blue">Maureen Ella, Founder</span>
+                <span className="font-serif italic text-xl text-brand-blue">Maureen, Founder</span>
               </div>
             </div>
           </Reveal>
@@ -64,7 +66,7 @@ export default function About() {
           </Reveal>
           <Reveal className="mb-20 grid grid-cols-1 md:grid-cols-[1fr_1.4fr] gap-[18px] md:gap-12 items-end">
             <h2 className="font-serif text-[clamp(32px,4.4vw,56px)] leading-[1.05] max-w-[18ch] font-light text-charcoal">What we <em className="italic text-accent-gold">actually believe.</em></h2>
-            <p className="text-subtle text-base leading-[1.6] max-w-[48ch]">Three things we won't compromise on, written plainly.</p>
+            <p className="text-subtle text-base leading-[1.6] max-w-[48ch]">Three things we will not compromise on, written plainly.</p>
           </Reveal>
           <Reveal className="grid grid-cols-1 md:grid-cols-3 gap-9 md:gap-12">
             {[

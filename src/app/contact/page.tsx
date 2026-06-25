@@ -63,7 +63,7 @@ export default function Contact() {
           <Reveal className="font-mono text-[11px] tracking-[0.22em] text-subtle uppercase">N° 005 — Contact</Reveal>
           <Reveal className="mt-6 grid grid-cols-1 md:grid-cols-[1.3fr_1fr] gap-6 md:gap-16 items-end">
             <h1 className="font-serif text-[clamp(40px,6.2vw,84px)] leading-[1.02] max-w-[14ch] font-light text-charcoal">Tell us about your <em className="italic text-accent-gold">wedding day.</em></h1>
-            <p className="font-serif text-[clamp(20px,2.2vw,26px)] leading-[1.45] text-body font-light max-w-[46ch]">We respond to every inquiry within 24 hours — direct human responses, not chatbots.</p>
+            <p className="font-serif text-[clamp(20px,2.2vw,26px)] leading-[1.45] text-body font-light max-w-[46ch]">We respond to every inquiry within 24 hours — direct human responses.</p>
           </Reveal>
         </div>
       </section>
@@ -135,7 +135,7 @@ export default function Contact() {
               <div className="h-px bg-line-soft w-full"></div>
               <div>
                 <h4 className="font-sans text-[11px] tracking-[0.2em] uppercase text-subtle font-medium mb-2">Response time</h4>
-                <p className="text-sm text-body leading-[1.6]">Within 24 hours, often sooner. We're a small team — direct human responses, not chatbots.</p>
+                <p className="text-sm text-body leading-[1.6]">Within 24 hours, often sooner. We are a small team — direct human responses.</p>
               </div>
               <div className="h-px bg-line-soft w-full"></div>
               <div>
