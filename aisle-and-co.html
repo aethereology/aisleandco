@@ -156,14 +156,6 @@
   .cities .city .code{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.18em;color:var(--subtle)}
   @media (max-width:700px){.cities{grid-template-columns:1fr 1fr}}
 
-  /* logos */
-  .logos{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)}
-  .logos .slot{aspect-ratio:5/3;border-right:1px solid var(--line-soft);display:flex;align-items:center;justify-content:center;position:relative;color:var(--subtle);font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.22em;text-transform:uppercase}
-  .logos .slot:last-child{border-right:0}
-  .logos .slot .pl{font-family:"Cormorant Garamond",serif;font-size:22px;color:#bbb;letter-spacing:0;text-transform:none;font-style:italic}
-  .logos .slot .badge{position:absolute;top:14px;right:14px;font-size:9px;letter-spacing:.2em;color:var(--subtle)}
-  @media (max-width:800px){.logos{grid-template-columns:1fr 1fr 1fr}.logos .slot:nth-child(3){border-right:0}}
-
   /* CTA band */
   .cta-band{background:var(--cream);text-align:center;padding:140px 32px}
   .cta-band h2{max-width:18ch;margin:0 auto 36px;font-weight:300}
@@ -241,11 +233,6 @@
   .checks li{display:flex;gap:16px;font-size:16px;align-items:flex-start;padding:18px 0;border-bottom:1px solid var(--line-soft)}
   .checks .check{width:24px;height:24px;border-radius:50%;background:var(--brand-blue);color:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
   @media (max-width:700px){.checks{grid-template-columns:1fr}}
-
-  .venues{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line-soft);border-left:1px solid var(--line-soft)}
-  .venues .v{padding:36px 28px;border-right:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);font-family:"Cormorant Garamond",serif;font-size:24px;color:var(--charcoal);text-align:center;display:flex;align-items:center;justify-content:center;min-height:120px;letter-spacing:.01em}
-  @media (max-width:800px){.venues{grid-template-columns:1fr 1fr}}
-  @media (max-width:500px){.venues{grid-template-columns:1fr}}
 
   /* contact */
   .contact-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:80px}
@@ -565,24 +552,6 @@ const PAGE_HOME = () => `
     </div>
   </section>
 
-  <!-- LOGOS -->
-  <section style="padding-top:0">
-    <div class="wrap">
-      <div class="marquee-meta" data-rev>
-        <span>§ 04 — Trusted by</span>
-        <span>Partner roster · 2026</span>
-      </div>
-      <div class="logos" data-rev>
-        ${['Venue No. 1','Venue No. 2','Venue No. 3','Venue No. 4','Venue No. 5'].map(v=>`
-          <div class="slot">
-            <span class="badge">Coming soon</span>
-            <span class="pl">${v}</span>
-          </div>`).join('')}
-      </div>
-      <p class="center" style="margin-top:24px;color:var(--subtle);font-size:13px">We are actively building our preferred-vendor relationships across Northeast Florida.</p>
-    </div>
-  </section>
-
   <!-- CTA BAND -->
   <section class="cta-band" data-rev>
     <span class="pgnum" style="display:block;margin-bottom:32px">— Let's talk —</span>
@@ -744,12 +713,12 @@ const PAGE_ABOUT = () => `
           <span class="tag">Placeholder · Founder portrait</span>
         </div>
         <div class="text">
-          <h2 style="margin-bottom:32px;font-weight:300">A wedding planner who used to be a <em style="font-style:italic;color:var(--brand-blue)">hospital nurse.</em></h2>
+          <h2 style="margin-bottom:32px;font-weight:300">A bridal artist who saw the gap <em style="font-style:italic;color:var(--brand-blue)">from the chair.</em></h2>
           <p>Aisle &amp; Co. began at the back of a coastal venue, in October, with a six-year-old in a flower crown asking when she could go back to the dance floor. The bride was on the patio. The planner was on a radio. Nobody on payroll was actually <em>watching</em> the kids.</p>
-          <p>The founder, Kyle, had spent a decade between pediatric care, in-home pet sitting, and large-format events. He'd seen the gap from every side. Northeast Florida — with its destination weddings, coastal venues, and 18-month booking calendars — had no dedicated, insured, wedding-day-specific care option. Plenty of babysitters. Plenty of dog walkers. Nobody who knew that the photographer needs the dog at 4:42, not 5:00.</p>
-          <p>So he built the team he wished he'd had on the radio that night. Background-checked. CPR-certified. Trained on a manual that exists. Insured to the standard a Ritz coordinator will actually accept.</p>
+          <p>The founder, Maureen Ella, had spent years as a bridal beauty artist — in the room every wedding morning, at venues across St. Augustine, Jacksonville, Palm Coast, and beyond. She saw the same gap from the chair, over and over: the bride glowing, the planner on a radio, and nobody actually watching the kids — or the dog. Northeast Florida — with its destination weddings, coastal venues, and 18-month booking calendars — had no dedicated, insured, wedding-day-specific care option. Plenty of babysitters. Plenty of dog walkers. Nobody who knew that the photographer needs the dog at 4:42, not 5:00.</p>
+          <p>So she built the team she wished every wedding morning had. Background-checked. CPR-certified. Trained on a manual that exists. Insured to the standard a Ritz coordinator will actually accept.</p>
           <p>That's the whole story. We hope to be a small footnote in yours.</p>
-          <div class="signature">— Kyle, Founder</div>
+          <div class="signature">— Maureen Ella, Founder</div>
         </div>
       </div>
     </div>
@@ -797,7 +766,7 @@ const PAGE_ABOUT = () => `
       </div>
       <div class="team" data-rev>
         ${[
-          ['Kyle','Founder · Operations','Pediatric care, pet care, and large-format events. Reads every contract.'],
+          ['Maureen Ella','Founder · Operations','Bridal beauty artist turned founder. In the room every wedding morning — she built the care team she kept wishing for.'],
           ['Lead Sitter Captain','To be announced','Heads the kids\u2019 room. Pediatric CPR, AHCA Level 2, and the Aisle &amp; Co. Sitter Manual.'],
           ['Pet of Honor Lead','To be announced','Pet First Aid–certified. Knows the difference between a stressed dog and a tired one.']
         ].map(([n,r,b])=>`
@@ -879,19 +848,6 @@ const PAGE_VENDORS = () => `
             <span><strong style="font-weight:500">${t}.</strong> <span style="color:var(--subtle)">${d}.</span></span>
           </li>`).join('')}
       </ul>
-    </div>
-  </section>
-
-  <section style="padding-top:0">
-    <div class="wrap">
-      <div class="marquee-meta" data-rev>
-        <span>§ — Currently pursuing partnerships with</span>
-        <span>Northeast Florida · 2026</span>
-      </div>
-      <div class="venues" data-rev>
-        ${['Treasury Group','Omni Amelia Island','Ritz-Carlton Amelia','Sawgrass Marriott','Hammock Beach','Epping Forest'].map(v=>`<div class="v">${v}</div>`).join('')}
-      </div>
-      <p class="center" style="margin-top:32px;color:var(--subtle);font-size:14px;max-width:60ch;margin-left:auto;margin-right:auto">We are actively building our preferred-vendor relationships across Northeast Florida — let's talk.</p>
     </div>
   </section>
 

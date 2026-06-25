@@ -1,7 +1,21 @@
-import { Placeholder } from '@/components/ui/Placeholder';
+import Image from 'next/image';
 import { Button } from '@/components/ui/Button';
 import { Reveal } from '@/components/ui/Reveal';
 import { Accordion } from '@/components/ui/Accordion';
+
+function ServiceImage({ src, alt, className = '' }: { src: string; alt: string; className?: string }) {
+  return (
+    <div className={`relative aspect-[4/5] rounded-md w-full overflow-hidden bg-cream shadow-sm ${className}`}>
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        sizes="(max-width: 768px) 100vw, 50vw"
+        className="object-cover"
+      />
+    </div>
+  );
+}
 
 export default function Services() {
   const faqs = [
@@ -28,13 +42,16 @@ export default function Services() {
         <div className="max-w-[1240px] mx-auto px-5 sm:px-8">
           {/* AISLE SITTERS */}
           <Reveal className="grid grid-cols-1 md:grid-cols-[1.05fr_1fr] gap-10 md:gap-20 items-center py-15">
-            <Placeholder text="Placeholder · Kids' room at venue" className="aspect-[4/5] rounded-md w-full" />
+            <ServiceImage
+              src="/services/aisle-sitters.png"
+              alt="Children doing crafts with trained sitters in a coastal wedding venue kids' room"
+            />
             <div className="order-first md:order-last">
               <div className="flex items-center gap-3.5 text-accent-gold font-serif italic text-lg mb-4 before:content-[''] before:w-9 before:h-px before:bg-accent-gold">Service One</div>
               <h2 className="font-serif text-[clamp(32px,4.4vw,56px)] leading-[1.05] text-charcoal mb-6 font-light">Aisle Sitters.</h2>
-              <p className="text-body text-[17px] leading-[1.7] mb-9 max-w-[54ch]">A dedicated kids' room (or zone) at the venue, staffed by Aisle &amp; Co. sitters from cocktail hour through reception end. Parents drop off, sitters take over, parents enjoy the reception.</p>
+              <p className="text-body text-[17px] leading-[1.7] mb-9 max-w-[54ch]">A dedicated kids&apos; room (or zone) at the venue, staffed by Aisle &amp; Co. sitters from cocktail hour through reception end. Parents drop off, sitters take over, parents enjoy the reception.</p>
               
-              <h4 className="text-[13px] tracking-[0.18em] uppercase text-brand-blue font-sans font-semibold mb-[18px]">What's included</h4>
+              <h4 className="text-[13px] tracking-[0.18em] uppercase text-brand-blue font-sans font-semibold mb-[18px]">What&apos;s included</h4>
               <ul className="list-none p-0 m-0 mb-9 grid gap-3.5">
                 {[
                   "Dedicated lead sitter as parent point of contact",
@@ -97,12 +114,18 @@ export default function Services() {
               </div>
               <Button href="/contact" variant="outline-dark" withArrow>Inquire about Pet of Honor</Button>
             </div>
-            <Placeholder text="Placeholder · Well-dressed dog, ceremony" className="aspect-[4/5] rounded-md w-full" />
+            <ServiceImage
+              src="/services/pet-of-honor.png"
+              alt="Wedding pet handler holding a calm dog on a coastal ceremony walkway"
+            />
           </Reveal>
 
           {/* WEEKEND CARE */}
           <Reveal className="grid grid-cols-1 md:grid-cols-[1.05fr_1fr] gap-10 md:gap-20 items-center py-[60px]">
-            <Placeholder text="Placeholder · Coastal venue, late afternoon" isBlue className="aspect-[4/5] rounded-md w-full" />
+            <ServiceImage
+              src="/services/wedding-weekend-care.png"
+              alt="Wedding care coordinator preparing activity kits and pet supplies at a coastal venue"
+            />
             <div className="order-first md:order-last">
               <div className="flex items-center gap-3.5 text-accent-gold font-serif italic text-lg mb-4 before:content-[''] before:w-9 before:h-px before:bg-accent-gold">Service Three</div>
               <h2 className="font-serif text-[clamp(32px,4.4vw,56px)] leading-[1.05] text-charcoal mb-6 font-light">Wedding Weekend Care.</h2>
@@ -140,7 +163,7 @@ export default function Services() {
           </Reveal>
           <Reveal className="mb-12 grid grid-cols-1 md:grid-cols-[1fr_1.4fr] gap-[18px] md:gap-12 items-end">
             <h2 className="font-serif text-[clamp(32px,4.4vw,56px)] leading-[1.05] max-w-[18ch] font-light text-charcoal m-0">Questions, <em className="italic text-accent-gold">answered honestly.</em></h2>
-            <p className="text-subtle text-base leading-[1.6] max-w-[48ch]">If you don't see yours here, write us — a real human reads every email and replies within 24 hours.</p>
+            <p className="text-subtle text-base leading-[1.6] max-w-[48ch]">If you don&apos;t see yours here, write us — a real human reads every email and replies within 24 hours.</p>
           </Reveal>
           <Reveal>
             <Accordion items={faqs} />

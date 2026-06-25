@@ -1,9 +1,7 @@
 import { Reveal } from '@/components/ui/Reveal';
-import { Button } from '@/components/ui/Button';
+import { VendorForm } from './VendorForm';
 
 export default function ForVendors() {
-  const venues = ['Treasury Group', 'Omni Amelia Island', 'Ritz-Carlton Amelia', 'Sawgrass Marriott', 'Hammock Beach', 'Epping Forest'];
-
   return (
     <div className="animate-[fade_0.55s_cubic-bezier(0.2,0.7,0.2,1)_both]">
       <section className="pt-[160px] pb-20">
@@ -66,24 +64,6 @@ export default function ForVendors() {
         </div>
       </section>
 
-      <section className="pb-[clamp(72px,10vw,140px)] pt-0">
-        <div className="max-w-[1240px] mx-auto px-5 sm:px-8">
-          <Reveal className="flex flex-col sm:flex-row justify-between gap-1 sm:gap-0 font-mono text-[11px] tracking-[0.18em] text-subtle uppercase mb-10 md:mb-16">
-            <span>§ — Currently pursuing partnerships with</span>
-            <span>Northeast Florida · 2026</span>
-          </Reveal>
-          <Reveal className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 border-t border-l border-line-soft">
-            {venues.map((v, i) => (
-              <div key={i} className="group relative py-9 px-7 border-r border-b border-line-soft font-serif text-[24px] text-charcoal text-center flex items-center justify-center min-h-[120px] tracking-[0.01em] transition-colors duration-[400ms] hover:bg-cream/50 overflow-hidden">
-                <span className="gold-line bottom-0" />
-                <span className="transition-transform duration-[450ms] group-hover:scale-105">{v}</span>
-              </div>
-            ))}
-          </Reveal>
-          <p className="text-center mt-8 text-subtle text-sm max-w-[60ch] mx-auto">We are actively building our preferred-vendor relationships across Northeast Florida — let's talk.</p>
-        </div>
-      </section>
-
       <section className="bg-cream py-[clamp(72px,10vw,140px)]">
         <div className="max-w-[980px] mx-auto px-5 sm:px-8">
           <Reveal className="mb-10 text-left">
@@ -92,25 +72,7 @@ export default function ForVendors() {
             <p className="mt-4 text-subtle text-base leading-[1.6] max-w-[48ch]">Pricing, sample COI, sample timeline, and the planner referral terms — sent within 24 hours.</p>
           </Reveal>
           <Reveal>
-            <form className="grid gap-5.5">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-[18px]">
-                <div className="grid gap-2"><label className="text-[11px] tracking-[0.18em] uppercase text-subtle font-medium">Name</label><input type="text" required className="font-inherit text-[15px] px-4 py-3.5 border border-line rounded-[10px] bg-white text-charcoal w-full outline-none focus:border-brand-blue focus:shadow-[0_0_0_4px_rgba(31,78,121,0.1)] transition-all" /></div>
-                <div className="grid gap-2"><label className="text-[11px] tracking-[0.18em] uppercase text-subtle font-medium">Email</label><input type="email" required className="font-inherit text-[15px] px-4 py-3.5 border border-line rounded-[10px] bg-white text-charcoal w-full outline-none focus:border-brand-blue focus:shadow-[0_0_0_4px_rgba(31,78,121,0.1)] transition-all" /></div>
-              </div>
-              <div className="grid gap-2"><label className="text-[11px] tracking-[0.18em] uppercase text-subtle font-medium">Venue / Firm name</label><input type="text" required className="font-inherit text-[15px] px-4 py-3.5 border border-line rounded-[10px] bg-white text-charcoal w-full outline-none focus:border-brand-blue focus:shadow-[0_0_0_4px_rgba(31,78,121,0.1)] transition-all" /></div>
-              <div className="grid gap-2"><label className="text-[11px] tracking-[0.18em] uppercase text-subtle font-medium">Role</label>
-                <select className="font-inherit text-[15px] px-4 py-3.5 border border-line rounded-[10px] bg-white text-charcoal w-full outline-none focus:border-brand-blue focus:shadow-[0_0_0_4px_rgba(31,78,121,0.1)] transition-all">
-                  <option>Planner</option>
-                  <option>Venue Coordinator</option>
-                  <option>Other</option>
-                </select>
-              </div>
-              <div className="grid gap-2"><label className="text-[11px] tracking-[0.18em] uppercase text-subtle font-medium">Message (optional)</label><textarea placeholder="Anything we should know about your couples or calendar." className="font-inherit text-[15px] px-4 py-3.5 border border-line rounded-[10px] bg-white text-charcoal w-full min-h-[120px] resize-y outline-none focus:border-brand-blue focus:shadow-[0_0_0_4px_rgba(31,78,121,0.1)] transition-all"></textarea></div>
-              <div className="flex items-center gap-4 mt-2 flex-wrap">
-                <Button type="button" withArrow>Send me the packet</Button>
-                <span className="text-subtle text-[13px]">We reply within 24 hours.</span>
-              </div>
-            </form>
+            <VendorForm />
           </Reveal>
         </div>
       </section>

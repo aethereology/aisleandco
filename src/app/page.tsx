@@ -13,8 +13,6 @@ export default function Home() {
     ['Daytona Beach', 'DAB · Volusia']
   ];
 
-  const venues = ['Venue No. 1', 'Venue No. 2', 'Venue No. 3', 'Venue No. 4', 'Venue No. 5'];
-
   return (
     <div className="animate-fade">
       <section className="relative min-h-screen text-white overflow-hidden flex items-end pt-[200px] pb-24 md:pt-[160px]">
@@ -136,25 +134,6 @@ export default function Home() {
               </div>
             ))}
           </Reveal>
-        </div>
-      </section>
-
-      {/* LOGOS */}
-      <section className="pb-[clamp(72px,10vw,140px)] pt-0">
-        <div className="max-w-[1240px] mx-auto px-5 sm:px-8">
-          <Reveal className="flex flex-col sm:flex-row justify-between gap-1 sm:gap-0 font-mono text-[11px] tracking-[0.18em] text-subtle uppercase mb-10 md:mb-16">
-            <span>§ 04 — Trusted by</span>
-            <span>Partner roster · 2026</span>
-          </Reveal>
-          <Reveal className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 border-y border-line-soft">
-            {venues.map((v, i) => (
-              <div key={i} className={`group aspect-[5/3] border-b sm:border-b-0 border-r border-line-soft flex items-center justify-center relative text-subtle font-mono text-[10px] tracking-[0.22em] uppercase transition-colors duration-[450ms] hover:bg-cream/50 ${i === venues.length - 1 ? 'border-r-0 border-b-0' : ''}`}>
-                <span className="absolute top-3.5 right-3.5 text-[9px] tracking-[0.2em] text-subtle">Coming soon</span>
-                <span className="font-serif text-[22px] text-subtle tracking-normal normal-case italic transition-all duration-[450ms] group-hover:text-charcoal group-hover:scale-105">{v}</span>
-              </div>
-            ))}
-          </Reveal>
-          <p className="font-sans text-center mt-6 text-subtle text-[13px]">We are actively building our preferred-vendor relationships across Northeast Florida.</p>
         </div>
       </section>
 
